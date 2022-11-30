@@ -1,0 +1,18 @@
+C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\Projet_V1.vcxproj.AssemblyReference.cache
+C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\Projet_V1.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\Projet_V1.exe
+C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\Projet_V1.vcxproj.GenerateResource.cache
+C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\ProjetV1.MyMainForm.resources
+C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\ProjetV1.MyFormNewClients.resources
+C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\ProjetV1.MyFormUpdate.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.vcxproj.AssemblyReference.cache
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyMainForm.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.vcxproj.GenerateResource.cache
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.exe
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormNewStaff.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormSearch.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormSearch.en-GB.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormNewArticle.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormNewClient.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormUpdateStaff.resources
