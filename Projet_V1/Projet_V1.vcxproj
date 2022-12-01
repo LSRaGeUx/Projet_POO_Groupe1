@@ -122,37 +122,62 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Connexion_DB.cpp" />
-    <ClCompile Include="MyFormSearch.cpp" />
-    <ClCompile Include="MyFormUpdate.cpp" />
     <ClCompile Include="MyMainForm.cpp" />
     <ClCompile Include="Raquette.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Connexion_DB.h" />
+    <ClInclude Include="MyFormNewArticle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormNewClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyFormSearch.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyFormUpdate.h">
+    <ClInclude Include="MyFormUpdateClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormUpdateStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyMainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyFormNewClients.h">
+    <ClInclude Include="MyFormNewStaff.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Raquette.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyFormNewClients.resx">
-      <DependentUpon>MyFormNewClients.h</DependentUpon>
+    <EmbeddedResource Include="MyFormNewArticle.resx">
+      <DependentUpon>MyFormNewArticle.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFormUpdate.resx">
-      <DependentUpon>MyFormUpdate.h</DependentUpon>
+    <EmbeddedResource Include="MyFormNewClient.resx">
+      <DependentUpon>MyFormNewClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormNewStaff.resx">
+      <DependentUpon>MyFormNewStaff.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormSearch.en-GB.resx">
+      <DependentUpon>MyFormSearch.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormSearch.resx">
+      <DependentUpon>MyFormSearch.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormUpdateClient.resx">
+      <DependentUpon>MyFormUpdateClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormUpdateStock.resx">
+      <DependentUpon>MyFormUpdateStock.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyMainForm.resx">
       <DependentUpon>MyMainForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

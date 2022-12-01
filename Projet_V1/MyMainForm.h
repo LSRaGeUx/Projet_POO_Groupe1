@@ -1,6 +1,9 @@
 #pragma once
-#include "MyFormNewClients.h"
-#include "MyFormUpdate.h"
+#include "MyFormNewStaff.h"
+#include "MyFormNewClient.h"
+#include "MyFormUpdateClient.h"
+#include "MyFormSearch.h"
+#include "MyFormNewArticle.h"
 #include "Connexion_DB.h"
 #include "Raquette.h"
 
@@ -38,6 +41,8 @@ namespace ProjetV1 {
 				delete components;
 			}
 		}
+	private: NS_Comp_Svc::CLservices^ oSvc;
+	private: System::Data::DataSet^ oDs;
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	private: System::Windows::Forms::MenuStrip^ menuStrip2;
 	private: System::Windows::Forms::ToolStripMenuItem^ menuToolStripMenuItem;
@@ -77,6 +82,7 @@ namespace ProjetV1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyMainForm::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
 			this->menuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -84,21 +90,23 @@ namespace ProjetV1 {
 			this->personnelToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->createNewMemberToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->alterMemberToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->clientToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->createToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->modifyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->orderToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->createToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->modifyToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->searchToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->stockToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->createToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->modifyToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->searchToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->quitAltF4ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->searchToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->searchToolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->searchToolStripMenuItem3 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->analyseToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->oDs = (gcnew System::Data::DataSet());
+			this->oSvc = (gcnew NS_Comp_Svc::CLservices());
 			this->menuStrip2->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -153,22 +161,28 @@ namespace ProjetV1 {
 					this->alterMemberToolStripMenuItem, this->searchToolStripMenuItem1
 			});
 			this->personnelToolStripMenuItem->Name = L"personnelToolStripMenuItem";
-			this->personnelToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->personnelToolStripMenuItem->Size = System::Drawing::Size(130, 26);
 			this->personnelToolStripMenuItem->Text = L"Staff";
 			// 
 			// createNewMemberToolStripMenuItem
 			// 
 			this->createNewMemberToolStripMenuItem->Name = L"createNewMemberToolStripMenuItem";
-			this->createNewMemberToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->createNewMemberToolStripMenuItem->Size = System::Drawing::Size(139, 26);
 			this->createNewMemberToolStripMenuItem->Text = L"Create";
-			this->createNewMemberToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::createNewMemberToolStripMenuItem_Click);
+			this->createNewMemberToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::Create_New_Staff_Click);
 			// 
 			// alterMemberToolStripMenuItem
 			// 
 			this->alterMemberToolStripMenuItem->Name = L"alterMemberToolStripMenuItem";
-			this->alterMemberToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->alterMemberToolStripMenuItem->Size = System::Drawing::Size(139, 26);
 			this->alterMemberToolStripMenuItem->Text = L"Modify";
 			this->alterMemberToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::alterMemberToolStripMenuItem_Click);
+			// 
+			// searchToolStripMenuItem1
+			// 
+			this->searchToolStripMenuItem1->Name = L"searchToolStripMenuItem1";
+			this->searchToolStripMenuItem1->Size = System::Drawing::Size(139, 26);
+			this->searchToolStripMenuItem1->Text = L"Search";
 			// 
 			// clientToolStripMenuItem
 			// 
@@ -177,22 +191,31 @@ namespace ProjetV1 {
 					this->modifyToolStripMenuItem, this->searchToolStripMenuItem2
 			});
 			this->clientToolStripMenuItem->Name = L"clientToolStripMenuItem";
-			this->clientToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->clientToolStripMenuItem->Size = System::Drawing::Size(130, 26);
 			this->clientToolStripMenuItem->Text = L"Client";
 			// 
 			// createToolStripMenuItem
 			// 
 			this->createToolStripMenuItem->Name = L"createToolStripMenuItem";
-			this->createToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->createToolStripMenuItem->Size = System::Drawing::Size(139, 26);
 			this->createToolStripMenuItem->Text = L"Create";
-			this->createToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::Create_New_Client_Click);
+			this->createToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::Create_Client_Click);
+
 			// 
 			// modifyToolStripMenuItem
 			// 
 			this->modifyToolStripMenuItem->Name = L"modifyToolStripMenuItem";
-			this->modifyToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->modifyToolStripMenuItem->Size = System::Drawing::Size(139, 26);
 			this->modifyToolStripMenuItem->Text = L"Modify";
 			this->modifyToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::Uptade_Client_Click);
+			// 
+			// searchToolStripMenuItem2
+			// 
+			this->searchToolStripMenuItem2->Name = L"searchToolStripMenuItem2";
+			this->searchToolStripMenuItem2->Size = System::Drawing::Size(139, 26);
+			this->searchToolStripMenuItem2->Text = L"Search";
+			this->searchToolStripMenuItem2->Click += gcnew System::EventHandler(this, &MyMainForm::Search_Client_Click);
+
 			// 
 			// orderToolStripMenuItem
 			// 
@@ -201,20 +224,28 @@ namespace ProjetV1 {
 					this->modifyToolStripMenuItem1, this->searchToolStripMenuItem3
 			});
 			this->orderToolStripMenuItem->Name = L"orderToolStripMenuItem";
-			this->orderToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->orderToolStripMenuItem->Size = System::Drawing::Size(130, 26);
 			this->orderToolStripMenuItem->Text = L"Order";
 			// 
 			// createToolStripMenuItem1
 			// 
 			this->createToolStripMenuItem1->Name = L"createToolStripMenuItem1";
-			this->createToolStripMenuItem1->Size = System::Drawing::Size(224, 26);
+			this->createToolStripMenuItem1->Size = System::Drawing::Size(139, 26);
 			this->createToolStripMenuItem1->Text = L"Create";
 			// 
 			// modifyToolStripMenuItem1
 			// 
 			this->modifyToolStripMenuItem1->Name = L"modifyToolStripMenuItem1";
-			this->modifyToolStripMenuItem1->Size = System::Drawing::Size(224, 26);
+			this->modifyToolStripMenuItem1->Size = System::Drawing::Size(139, 26);
 			this->modifyToolStripMenuItem1->Text = L"Modify";
+			// 
+			// searchToolStripMenuItem3
+			// 
+			this->searchToolStripMenuItem3->Name = L"searchToolStripMenuItem3";
+			this->searchToolStripMenuItem3->Size = System::Drawing::Size(139, 26);
+			this->searchToolStripMenuItem3->Text = L"Search";
+			this->searchToolStripMenuItem3->Click += gcnew System::EventHandler(this, &MyMainForm::Search_Client_Click);
+
 			// 
 			// stockToolStripMenuItem
 			// 
@@ -223,25 +254,27 @@ namespace ProjetV1 {
 					this->modifyToolStripMenuItem2, this->searchToolStripMenuItem
 			});
 			this->stockToolStripMenuItem->Name = L"stockToolStripMenuItem";
-			this->stockToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->stockToolStripMenuItem->Size = System::Drawing::Size(130, 26);
 			this->stockToolStripMenuItem->Text = L"Stock";
 			// 
 			// createToolStripMenuItem2
 			// 
 			this->createToolStripMenuItem2->Name = L"createToolStripMenuItem2";
-			this->createToolStripMenuItem2->Size = System::Drawing::Size(224, 26);
+			this->createToolStripMenuItem2->Size = System::Drawing::Size(139, 26);
 			this->createToolStripMenuItem2->Text = L"Create";
+			this->createToolStripMenuItem2->Click += gcnew System::EventHandler(this, &MyMainForm::Create_Stock_Click);
+
 			// 
 			// modifyToolStripMenuItem2
 			// 
 			this->modifyToolStripMenuItem2->Name = L"modifyToolStripMenuItem2";
-			this->modifyToolStripMenuItem2->Size = System::Drawing::Size(224, 26);
+			this->modifyToolStripMenuItem2->Size = System::Drawing::Size(139, 26);
 			this->modifyToolStripMenuItem2->Text = L"Modify";
 			// 
 			// searchToolStripMenuItem
 			// 
 			this->searchToolStripMenuItem->Name = L"searchToolStripMenuItem";
-			this->searchToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->searchToolStripMenuItem->Size = System::Drawing::Size(139, 26);
 			this->searchToolStripMenuItem->Text = L"Search";
 			// 
 			// quitAltF4ToolStripMenuItem
@@ -251,39 +284,22 @@ namespace ProjetV1 {
 			this->quitAltF4ToolStripMenuItem->Text = L"Quit                           [Alt F4]";
 			this->quitAltF4ToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::quit_AltF4_Click);
 			// 
-			// searchToolStripMenuItem1
-			// 
-			this->searchToolStripMenuItem1->Name = L"searchToolStripMenuItem1";
-			this->searchToolStripMenuItem1->Size = System::Drawing::Size(224, 26);
-			this->searchToolStripMenuItem1->Text = L"Search";
-			// 
-			// searchToolStripMenuItem2
-			// 
-			this->searchToolStripMenuItem2->Name = L"searchToolStripMenuItem2";
-			this->searchToolStripMenuItem2->Size = System::Drawing::Size(224, 26);
-			this->searchToolStripMenuItem2->Text = L"Search";
-			// 
-			// searchToolStripMenuItem3
-			// 
-			this->searchToolStripMenuItem3->Name = L"searchToolStripMenuItem3";
-			this->searchToolStripMenuItem3->Size = System::Drawing::Size(224, 26);
-			this->searchToolStripMenuItem3->Text = L"Search";
-			// 
 			// analyseToolStripMenuItem
 			// 
 			this->analyseToolStripMenuItem->Name = L"analyseToolStripMenuItem";
 			this->analyseToolStripMenuItem->Size = System::Drawing::Size(74, 24);
 			this->analyseToolStripMenuItem->Text = L"Analyse";
 			// 
-			// MyForm
+			// MyMainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1075, 498);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->menuStrip2);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
-			this->Name = L"MyForm";
+			this->Name = L"MyMainForm";
 			this->Text = L"MyForm";
 			this->menuStrip2->ResumeLayout(false);
 			this->menuStrip2->PerformLayout();
@@ -292,13 +308,25 @@ namespace ProjetV1 {
 
 		}
 #pragma endregion
-	private: System::Void Create_New_Client_Click(System::Object^ sender, System::EventArgs^ e) {
-		MyFormNewClient^ new_client = gcnew MyFormNewClient();
-		new_client->Show();
+	private: System::Void Create_New_Staff_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormNewStaff^ new_staff = gcnew MyFormNewStaff();
+		new_staff->Show();
+	}
+	private: System::Void Create_Client_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormNewClient^ create_client = gcnew MyFormNewClient();
+		create_client->Show();
 	}
 	private: System::Void Uptade_Client_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyFormUpdate^ update_client = gcnew MyFormUpdate();
 		update_client->Show();
+	}
+	private: System::Void Search_Client_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormSearch^ search_client = gcnew MyFormSearch();
+		search_client->Show();
+	}
+	private: System::Void Create_Stock_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormNewArticle^ create_stock = gcnew MyFormNewArticle();
+		create_stock->Show();
 	}
 
 

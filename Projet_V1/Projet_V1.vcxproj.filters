@@ -24,18 +24,12 @@
     <ClCompile Include="Raquette.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MyFormUpdate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MyFormSearch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyMainForm.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyFormNewClients.h">
+    <ClInclude Include="MyFormNewStaff.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Connexion_DB.h">
@@ -44,11 +38,23 @@
     <ClInclude Include="Raquette.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyFormUpdate.h">
+    <ClInclude Include="MyFormUpdateClient.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="MyFormSearch.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyFormNewClient.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormNewArticle.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormUpdateStock.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

@@ -4,11 +4,11 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 System::String^ NS_Comp_Mappage::Staff_manager::Select_staff(void)
 {
-	return "SELECT [Id_client], [first_name], [last_name], [birthdate], [first_order_date] FROM [XXXXXXXXXX].[dbo].[_Client]";
+	return "SELECT [Id_client], [first_name], [last_name], [birthdate] FROM [Projet_V1].[dbo].[client]";
 }
 System::String^ NS_Comp_Mappage::Staff_manager::Insert_staff(void)
 {
-	return "";
+	return "INSERT INTO staff (firts_name, lasy_name, hire_date) VALUES ('" + this->first_name + "', '" + this->last_name +"', '" + this->hire_date + "');";
 }
 System::String^ NS_Comp_Mappage::Staff_manager::Delete_staff(void)
 {
@@ -222,8 +222,13 @@ System::String^ NS_Comp_Mappage::Stock_manager::getReorderPoint(void) { return t
 System::String^ NS_Comp_Mappage::Stock_manager::getVat(void) { return this->vat; }
 System::String^ NS_Comp_Mappage::Stock_manager::getQuantitySold(void) { return this->quantity_sold; }
 
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//												Nature_manager												//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+System::String^ NS_Comp_Mappage::Nature_manager::Select_Nature(void)
+{
+	return "SELECT * FROM [Projet_V1].[dbo].[nature]";
+}
 
 //---------------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------------
@@ -232,6 +237,7 @@ NS_Comp_Svc::CLservices::CLservices(void)
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->oMappStaff = gcnew NS_Comp_Mappage::Staff_manager();
 	this->oMappAddress = gcnew NS_Comp_Mappage::Address_manager();
+	this->oMappNature = gcnew NS_Comp_Mappage::Nature_manager();
 }
 //---------------------------------------------------------------------------------------------------------------------------
 
@@ -277,5 +283,12 @@ void NS_Comp_Svc::CLservices::AddAddress(System::String^ address, System::String
 }
 
 //---------------------------------------------------------------------------------------------------
+System::Data::DataSet^ NS_Comp_Svc::CLservices::SelectAllTheNature(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappNature.
+	return this->oCad->getRows(sql, dataTableName);
+}
 //---------------------------------------------------------------------------------------------------
 

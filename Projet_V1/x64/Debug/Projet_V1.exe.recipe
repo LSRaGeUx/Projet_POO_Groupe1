@@ -2,10 +2,14 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Yan\OneDrive\Bureau\CESI\Semestre 3\Bloc_02_POO\Projet\Projet_V1\x64\Debug\Projet_V1.exe</FullPath>
+      <FullPath>C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
-  <SatelliteDlls />
+  <SatelliteDlls>
+    <SatelliteDll>
+      <FullPath>C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\en-GB\Projet_V1.resources.dll</FullPath>
+    </SatelliteDll>
+  </SatelliteDlls>
   <NonRecipeFileRefs />
 </Project>
