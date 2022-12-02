@@ -17,3 +17,4 @@ C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Pr
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormNewClient.resources
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormUpdateClient.resources
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormUpdateStock.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormCreateCommand.resources

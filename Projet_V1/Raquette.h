@@ -141,7 +141,7 @@ namespace NS_Comp_Mappage
 		System::String^ getQuantitySold(void);
 	};
 
-	ref class Nature_manager {
+	/*ref class Nature_manager {
 		System::String^ nature_type;
 
 		System::String^ Select_Nature();
@@ -149,7 +149,7 @@ namespace NS_Comp_Mappage
 		void setNatureType(System::String^);
 
 		System::String^ getNatureType(void);
-	};
+	};*/
 };
 
 
@@ -162,11 +162,11 @@ namespace NS_Comp_Svc
 		NS_Comp_Data::CLcad^ oCad;
 		NS_Comp_Mappage::Staff_manager^ oMappStaff;
 		NS_Comp_Mappage::Address_manager^ oMappAddress;
-		NS_Comp_Mappage::Nature_manager^ oMappNature;
+		//NS_Comp_Mappage::Nature_manager^ oMappNature;
 	public:
 		CLservices(void);
 		System::Data::DataSet^ SelectAllTheStaff(System::String^);
-		System::Data::DataSet^ SelectAllTheNature(System::String^);
+		//System::Data::DataSet^ SelectAllTheNature(System::String^);
 		System::Data::DataSet^ SelectAllTheAddress(System::String^);
 		void AddStaffMember(System::String^, System::String^, System::String^);
 		void AddAddress(System::String^, System::String^, System::String^);

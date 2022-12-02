@@ -127,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Connexion_DB.h" />
+    <ClInclude Include="MyFormCreateCommand.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyFormNewArticle.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -149,8 +152,10 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Raquette.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MyFormCreateCommand.resx" />
     <EmbeddedResource Include="MyFormNewArticle.resx">
       <DependentUpon>MyFormNewArticle.h</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Projet_V1.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

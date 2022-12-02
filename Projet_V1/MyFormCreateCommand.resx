@@ -1,0 +1,1872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Order menu</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MyFormCreateCommand</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;add.Name" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="&gt;&gt;add.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;add.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;add.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;applepay.Name" xml:space="preserve">
+    <value>applepay</value>
+  </data>
+  <data name="&gt;&gt;applepay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;applepay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;applepay.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;article.Name" xml:space="preserve">
+    <value>article</value>
+  </data>
+  <data name="&gt;&gt;article.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;article.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;article.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;category.Name" xml:space="preserve">
+    <value>category</value>
+  </data>
+  <data name="&gt;&gt;category.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;category.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;category.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboartcile.Name" xml:space="preserve">
+    <value>comboartcile</value>
+  </data>
+  <data name="&gt;&gt;comboartcile.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;comboartcile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboartcile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;combocategory.Name" xml:space="preserve">
+    <value>combocategory</value>
+  </data>
+  <data name="&gt;&gt;combocategory.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;combocategory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;combocategory.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;comboquantity.Name" xml:space="preserve">
+    <value>comboquantity</value>
+  </data>
+  <data name="&gt;&gt;comboquantity.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;comboquantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboquantity.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;googlepay.Name" xml:space="preserve">
+    <value>googlepay</value>
+  </data>
+  <data name="&gt;&gt;googlepay.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;googlepay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;googlepay.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelpanier.Name" xml:space="preserve">
+    <value>labelpanier</value>
+  </data>
+  <data name="&gt;&gt;labelpanier.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelpanier.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelpanier.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;mastercard.Name" xml:space="preserve">
+    <value>mastercard</value>
+  </data>
+  <data name="&gt;&gt;mastercard.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mastercard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mastercard.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panier.Name" xml:space="preserve">
+    <value>panier</value>
+  </data>
+  <data name="&gt;&gt;panier.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panier.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panier.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;paypal.Name" xml:space="preserve">
+    <value>paypal</value>
+  </data>
+  <data name="&gt;&gt;paypal.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;paypal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;paypal.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;quantity.Name" xml:space="preserve">
+    <value>quantity</value>
+  </data>
+  <data name="&gt;&gt;quantity.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;quantity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quantity.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;remove.Name" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="&gt;&gt;remove.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;remove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;remove.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;store.Name" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;store.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;store.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;store.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;update.Name" xml:space="preserve">
+    <value>update</value>
+  </data>
+  <data name="&gt;&gt;update.Parent" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="&gt;&gt;update.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;update.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="add.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="article.Text" xml:space="preserve">
+    <value>Article</value>
+  </data>
+  <data name="category.Text" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Article</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="comboartcile.Items" xml:space="preserve">
+    <value />
+  </data>
+  <data name="combocategory.Items" xml:space="preserve">
+    <value>[All]</value>
+  </data>
+  <data name="combocategory.Items1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="comboquantity.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="comboquantity.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="comboquantity.Items10" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="comboquantity.Items100" xml:space="preserve">
+    <value>101</value>
+  </data>
+  <data name="comboquantity.Items101" xml:space="preserve">
+    <value>102</value>
+  </data>
+  <data name="comboquantity.Items102" xml:space="preserve">
+    <value>103</value>
+  </data>
+  <data name="comboquantity.Items103" xml:space="preserve">
+    <value>104</value>
+  </data>
+  <data name="comboquantity.Items104" xml:space="preserve">
+    <value>105</value>
+  </data>
+  <data name="comboquantity.Items105" xml:space="preserve">
+    <value>106</value>
+  </data>
+  <data name="comboquantity.Items106" xml:space="preserve">
+    <value>107</value>
+  </data>
+  <data name="comboquantity.Items107" xml:space="preserve">
+    <value>108</value>
+  </data>
+  <data name="comboquantity.Items108" xml:space="preserve">
+    <value>109</value>
+  </data>
+  <data name="comboquantity.Items109" xml:space="preserve">
+    <value>110</value>
+  </data>
+  <data name="comboquantity.Items11" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="comboquantity.Items110" xml:space="preserve">
+    <value>111</value>
+  </data>
+  <data name="comboquantity.Items111" xml:space="preserve">
+    <value>112</value>
+  </data>
+  <data name="comboquantity.Items112" xml:space="preserve">
+    <value>113</value>
+  </data>
+  <data name="comboquantity.Items113" xml:space="preserve">
+    <value>114</value>
+  </data>
+  <data name="comboquantity.Items114" xml:space="preserve">
+    <value>115</value>
+  </data>
+  <data name="comboquantity.Items115" xml:space="preserve">
+    <value>116</value>
+  </data>
+  <data name="comboquantity.Items116" xml:space="preserve">
+    <value>117</value>
+  </data>
+  <data name="comboquantity.Items117" xml:space="preserve">
+    <value>118</value>
+  </data>
+  <data name="comboquantity.Items118" xml:space="preserve">
+    <value>119</value>
+  </data>
+  <data name="comboquantity.Items119" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="comboquantity.Items12" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="comboquantity.Items120" xml:space="preserve">
+    <value>121</value>
+  </data>
+  <data name="comboquantity.Items121" xml:space="preserve">
+    <value>122</value>
+  </data>
+  <data name="comboquantity.Items122" xml:space="preserve">
+    <value>123</value>
+  </data>
+  <data name="comboquantity.Items123" xml:space="preserve">
+    <value>124</value>
+  </data>
+  <data name="comboquantity.Items124" xml:space="preserve">
+    <value>125</value>
+  </data>
+  <data name="comboquantity.Items125" xml:space="preserve">
+    <value>126</value>
+  </data>
+  <data name="comboquantity.Items126" xml:space="preserve">
+    <value>127</value>
+  </data>
+  <data name="comboquantity.Items127" xml:space="preserve">
+    <value>128</value>
+  </data>
+  <data name="comboquantity.Items128" xml:space="preserve">
+    <value>129</value>
+  </data>
+  <data name="comboquantity.Items129" xml:space="preserve">
+    <value>130</value>
+  </data>
+  <data name="comboquantity.Items13" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="comboquantity.Items130" xml:space="preserve">
+    <value>131</value>
+  </data>
+  <data name="comboquantity.Items131" xml:space="preserve">
+    <value>132</value>
+  </data>
+  <data name="comboquantity.Items132" xml:space="preserve">
+    <value>133</value>
+  </data>
+  <data name="comboquantity.Items133" xml:space="preserve">
+    <value>134</value>
+  </data>
+  <data name="comboquantity.Items134" xml:space="preserve">
+    <value>135</value>
+  </data>
+  <data name="comboquantity.Items135" xml:space="preserve">
+    <value>136</value>
+  </data>
+  <data name="comboquantity.Items136" xml:space="preserve">
+    <value>137</value>
+  </data>
+  <data name="comboquantity.Items137" xml:space="preserve">
+    <value>138</value>
+  </data>
+  <data name="comboquantity.Items138" xml:space="preserve">
+    <value>139</value>
+  </data>
+  <data name="comboquantity.Items139" xml:space="preserve">
+    <value>140</value>
+  </data>
+  <data name="comboquantity.Items14" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="comboquantity.Items140" xml:space="preserve">
+    <value>141</value>
+  </data>
+  <data name="comboquantity.Items141" xml:space="preserve">
+    <value>142</value>
+  </data>
+  <data name="comboquantity.Items142" xml:space="preserve">
+    <value>143</value>
+  </data>
+  <data name="comboquantity.Items143" xml:space="preserve">
+    <value>144</value>
+  </data>
+  <data name="comboquantity.Items144" xml:space="preserve">
+    <value>145</value>
+  </data>
+  <data name="comboquantity.Items145" xml:space="preserve">
+    <value>146</value>
+  </data>
+  <data name="comboquantity.Items146" xml:space="preserve">
+    <value>147</value>
+  </data>
+  <data name="comboquantity.Items147" xml:space="preserve">
+    <value>148</value>
+  </data>
+  <data name="comboquantity.Items148" xml:space="preserve">
+    <value>149</value>
+  </data>
+  <data name="comboquantity.Items149" xml:space="preserve">
+    <value>150</value>
+  </data>
+  <data name="comboquantity.Items15" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="comboquantity.Items150" xml:space="preserve">
+    <value>151</value>
+  </data>
+  <data name="comboquantity.Items151" xml:space="preserve">
+    <value>152</value>
+  </data>
+  <data name="comboquantity.Items152" xml:space="preserve">
+    <value>153</value>
+  </data>
+  <data name="comboquantity.Items153" xml:space="preserve">
+    <value>154</value>
+  </data>
+  <data name="comboquantity.Items154" xml:space="preserve">
+    <value>155</value>
+  </data>
+  <data name="comboquantity.Items155" xml:space="preserve">
+    <value>156</value>
+  </data>
+  <data name="comboquantity.Items156" xml:space="preserve">
+    <value>157</value>
+  </data>
+  <data name="comboquantity.Items157" xml:space="preserve">
+    <value>158</value>
+  </data>
+  <data name="comboquantity.Items158" xml:space="preserve">
+    <value>159</value>
+  </data>
+  <data name="comboquantity.Items159" xml:space="preserve">
+    <value>160</value>
+  </data>
+  <data name="comboquantity.Items16" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="comboquantity.Items160" xml:space="preserve">
+    <value>161</value>
+  </data>
+  <data name="comboquantity.Items161" xml:space="preserve">
+    <value>162</value>
+  </data>
+  <data name="comboquantity.Items162" xml:space="preserve">
+    <value>163</value>
+  </data>
+  <data name="comboquantity.Items163" xml:space="preserve">
+    <value>164</value>
+  </data>
+  <data name="comboquantity.Items164" xml:space="preserve">
+    <value>165</value>
+  </data>
+  <data name="comboquantity.Items165" xml:space="preserve">
+    <value>166</value>
+  </data>
+  <data name="comboquantity.Items166" xml:space="preserve">
+    <value>167</value>
+  </data>
+  <data name="comboquantity.Items167" xml:space="preserve">
+    <value>168</value>
+  </data>
+  <data name="comboquantity.Items168" xml:space="preserve">
+    <value>169</value>
+  </data>
+  <data name="comboquantity.Items169" xml:space="preserve">
+    <value>170</value>
+  </data>
+  <data name="comboquantity.Items17" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="comboquantity.Items170" xml:space="preserve">
+    <value>171</value>
+  </data>
+  <data name="comboquantity.Items171" xml:space="preserve">
+    <value>172</value>
+  </data>
+  <data name="comboquantity.Items172" xml:space="preserve">
+    <value>173</value>
+  </data>
+  <data name="comboquantity.Items173" xml:space="preserve">
+    <value>174</value>
+  </data>
+  <data name="comboquantity.Items174" xml:space="preserve">
+    <value>175</value>
+  </data>
+  <data name="comboquantity.Items175" xml:space="preserve">
+    <value>176</value>
+  </data>
+  <data name="comboquantity.Items176" xml:space="preserve">
+    <value>177</value>
+  </data>
+  <data name="comboquantity.Items177" xml:space="preserve">
+    <value>178</value>
+  </data>
+  <data name="comboquantity.Items178" xml:space="preserve">
+    <value>179</value>
+  </data>
+  <data name="comboquantity.Items179" xml:space="preserve">
+    <value>180</value>
+  </data>
+  <data name="comboquantity.Items18" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="comboquantity.Items180" xml:space="preserve">
+    <value>181</value>
+  </data>
+  <data name="comboquantity.Items181" xml:space="preserve">
+    <value>182</value>
+  </data>
+  <data name="comboquantity.Items182" xml:space="preserve">
+    <value>183</value>
+  </data>
+  <data name="comboquantity.Items183" xml:space="preserve">
+    <value>184</value>
+  </data>
+  <data name="comboquantity.Items184" xml:space="preserve">
+    <value>185</value>
+  </data>
+  <data name="comboquantity.Items185" xml:space="preserve">
+    <value>186</value>
+  </data>
+  <data name="comboquantity.Items186" xml:space="preserve">
+    <value>187</value>
+  </data>
+  <data name="comboquantity.Items187" xml:space="preserve">
+    <value>188</value>
+  </data>
+  <data name="comboquantity.Items188" xml:space="preserve">
+    <value>189</value>
+  </data>
+  <data name="comboquantity.Items189" xml:space="preserve">
+    <value>190</value>
+  </data>
+  <data name="comboquantity.Items19" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="comboquantity.Items190" xml:space="preserve">
+    <value>191</value>
+  </data>
+  <data name="comboquantity.Items191" xml:space="preserve">
+    <value>192</value>
+  </data>
+  <data name="comboquantity.Items192" xml:space="preserve">
+    <value>193</value>
+  </data>
+  <data name="comboquantity.Items193" xml:space="preserve">
+    <value>194</value>
+  </data>
+  <data name="comboquantity.Items194" xml:space="preserve">
+    <value>195</value>
+  </data>
+  <data name="comboquantity.Items195" xml:space="preserve">
+    <value>196</value>
+  </data>
+  <data name="comboquantity.Items196" xml:space="preserve">
+    <value>197</value>
+  </data>
+  <data name="comboquantity.Items197" xml:space="preserve">
+    <value>198</value>
+  </data>
+  <data name="comboquantity.Items198" xml:space="preserve">
+    <value>199</value>
+  </data>
+  <data name="comboquantity.Items199" xml:space="preserve">
+    <value>200</value>
+  </data>
+  <data name="comboquantity.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="comboquantity.Items20" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="comboquantity.Items200" xml:space="preserve">
+    <value>201</value>
+  </data>
+  <data name="comboquantity.Items201" xml:space="preserve">
+    <value>202</value>
+  </data>
+  <data name="comboquantity.Items202" xml:space="preserve">
+    <value>203</value>
+  </data>
+  <data name="comboquantity.Items203" xml:space="preserve">
+    <value>204</value>
+  </data>
+  <data name="comboquantity.Items204" xml:space="preserve">
+    <value>205</value>
+  </data>
+  <data name="comboquantity.Items205" xml:space="preserve">
+    <value>206</value>
+  </data>
+  <data name="comboquantity.Items206" xml:space="preserve">
+    <value>207</value>
+  </data>
+  <data name="comboquantity.Items207" xml:space="preserve">
+    <value>208</value>
+  </data>
+  <data name="comboquantity.Items208" xml:space="preserve">
+    <value>209</value>
+  </data>
+  <data name="comboquantity.Items209" xml:space="preserve">
+    <value>210</value>
+  </data>
+  <data name="comboquantity.Items21" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="comboquantity.Items210" xml:space="preserve">
+    <value>211</value>
+  </data>
+  <data name="comboquantity.Items211" xml:space="preserve">
+    <value>212</value>
+  </data>
+  <data name="comboquantity.Items212" xml:space="preserve">
+    <value>213</value>
+  </data>
+  <data name="comboquantity.Items213" xml:space="preserve">
+    <value>214</value>
+  </data>
+  <data name="comboquantity.Items214" xml:space="preserve">
+    <value>215</value>
+  </data>
+  <data name="comboquantity.Items215" xml:space="preserve">
+    <value>216</value>
+  </data>
+  <data name="comboquantity.Items216" xml:space="preserve">
+    <value>217</value>
+  </data>
+  <data name="comboquantity.Items217" xml:space="preserve">
+    <value>218</value>
+  </data>
+  <data name="comboquantity.Items218" xml:space="preserve">
+    <value>219</value>
+  </data>
+  <data name="comboquantity.Items219" xml:space="preserve">
+    <value>220</value>
+  </data>
+  <data name="comboquantity.Items22" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="comboquantity.Items220" xml:space="preserve">
+    <value>221</value>
+  </data>
+  <data name="comboquantity.Items221" xml:space="preserve">
+    <value>222</value>
+  </data>
+  <data name="comboquantity.Items222" xml:space="preserve">
+    <value>223</value>
+  </data>
+  <data name="comboquantity.Items223" xml:space="preserve">
+    <value>224</value>
+  </data>
+  <data name="comboquantity.Items224" xml:space="preserve">
+    <value>225</value>
+  </data>
+  <data name="comboquantity.Items225" xml:space="preserve">
+    <value>226</value>
+  </data>
+  <data name="comboquantity.Items226" xml:space="preserve">
+    <value>227</value>
+  </data>
+  <data name="comboquantity.Items227" xml:space="preserve">
+    <value>228</value>
+  </data>
+  <data name="comboquantity.Items228" xml:space="preserve">
+    <value>229</value>
+  </data>
+  <data name="comboquantity.Items229" xml:space="preserve">
+    <value>230</value>
+  </data>
+  <data name="comboquantity.Items23" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="comboquantity.Items230" xml:space="preserve">
+    <value>231</value>
+  </data>
+  <data name="comboquantity.Items231" xml:space="preserve">
+    <value>232</value>
+  </data>
+  <data name="comboquantity.Items232" xml:space="preserve">
+    <value>233</value>
+  </data>
+  <data name="comboquantity.Items233" xml:space="preserve">
+    <value>234</value>
+  </data>
+  <data name="comboquantity.Items234" xml:space="preserve">
+    <value>235</value>
+  </data>
+  <data name="comboquantity.Items235" xml:space="preserve">
+    <value>236</value>
+  </data>
+  <data name="comboquantity.Items236" xml:space="preserve">
+    <value>237</value>
+  </data>
+  <data name="comboquantity.Items237" xml:space="preserve">
+    <value>238</value>
+  </data>
+  <data name="comboquantity.Items238" xml:space="preserve">
+    <value>239</value>
+  </data>
+  <data name="comboquantity.Items239" xml:space="preserve">
+    <value>240</value>
+  </data>
+  <data name="comboquantity.Items24" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="comboquantity.Items240" xml:space="preserve">
+    <value>241</value>
+  </data>
+  <data name="comboquantity.Items241" xml:space="preserve">
+    <value>242</value>
+  </data>
+  <data name="comboquantity.Items242" xml:space="preserve">
+    <value>243</value>
+  </data>
+  <data name="comboquantity.Items243" xml:space="preserve">
+    <value>244</value>
+  </data>
+  <data name="comboquantity.Items244" xml:space="preserve">
+    <value>245</value>
+  </data>
+  <data name="comboquantity.Items245" xml:space="preserve">
+    <value>246</value>
+  </data>
+  <data name="comboquantity.Items246" xml:space="preserve">
+    <value>247</value>
+  </data>
+  <data name="comboquantity.Items247" xml:space="preserve">
+    <value>248</value>
+  </data>
+  <data name="comboquantity.Items248" xml:space="preserve">
+    <value>249</value>
+  </data>
+  <data name="comboquantity.Items249" xml:space="preserve">
+    <value>250</value>
+  </data>
+  <data name="comboquantity.Items25" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="comboquantity.Items250" xml:space="preserve">
+    <value>251</value>
+  </data>
+  <data name="comboquantity.Items251" xml:space="preserve">
+    <value>252</value>
+  </data>
+  <data name="comboquantity.Items252" xml:space="preserve">
+    <value>253</value>
+  </data>
+  <data name="comboquantity.Items253" xml:space="preserve">
+    <value>254</value>
+  </data>
+  <data name="comboquantity.Items254" xml:space="preserve">
+    <value>255</value>
+  </data>
+  <data name="comboquantity.Items255" xml:space="preserve">
+    <value>256</value>
+  </data>
+  <data name="comboquantity.Items256" xml:space="preserve">
+    <value>257</value>
+  </data>
+  <data name="comboquantity.Items257" xml:space="preserve">
+    <value>258</value>
+  </data>
+  <data name="comboquantity.Items258" xml:space="preserve">
+    <value>259</value>
+  </data>
+  <data name="comboquantity.Items259" xml:space="preserve">
+    <value>260</value>
+  </data>
+  <data name="comboquantity.Items26" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="comboquantity.Items260" xml:space="preserve">
+    <value>261</value>
+  </data>
+  <data name="comboquantity.Items261" xml:space="preserve">
+    <value>262</value>
+  </data>
+  <data name="comboquantity.Items262" xml:space="preserve">
+    <value>263</value>
+  </data>
+  <data name="comboquantity.Items263" xml:space="preserve">
+    <value>264</value>
+  </data>
+  <data name="comboquantity.Items264" xml:space="preserve">
+    <value>265</value>
+  </data>
+  <data name="comboquantity.Items265" xml:space="preserve">
+    <value>266</value>
+  </data>
+  <data name="comboquantity.Items266" xml:space="preserve">
+    <value>267</value>
+  </data>
+  <data name="comboquantity.Items267" xml:space="preserve">
+    <value>268</value>
+  </data>
+  <data name="comboquantity.Items268" xml:space="preserve">
+    <value>269</value>
+  </data>
+  <data name="comboquantity.Items269" xml:space="preserve">
+    <value>270</value>
+  </data>
+  <data name="comboquantity.Items27" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="comboquantity.Items270" xml:space="preserve">
+    <value>271</value>
+  </data>
+  <data name="comboquantity.Items271" xml:space="preserve">
+    <value>272</value>
+  </data>
+  <data name="comboquantity.Items272" xml:space="preserve">
+    <value>273</value>
+  </data>
+  <data name="comboquantity.Items273" xml:space="preserve">
+    <value>274</value>
+  </data>
+  <data name="comboquantity.Items274" xml:space="preserve">
+    <value>275</value>
+  </data>
+  <data name="comboquantity.Items275" xml:space="preserve">
+    <value>276</value>
+  </data>
+  <data name="comboquantity.Items276" xml:space="preserve">
+    <value>277</value>
+  </data>
+  <data name="comboquantity.Items277" xml:space="preserve">
+    <value>278</value>
+  </data>
+  <data name="comboquantity.Items278" xml:space="preserve">
+    <value>279</value>
+  </data>
+  <data name="comboquantity.Items279" xml:space="preserve">
+    <value>280</value>
+  </data>
+  <data name="comboquantity.Items28" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="comboquantity.Items280" xml:space="preserve">
+    <value>281</value>
+  </data>
+  <data name="comboquantity.Items281" xml:space="preserve">
+    <value>282</value>
+  </data>
+  <data name="comboquantity.Items282" xml:space="preserve">
+    <value>283</value>
+  </data>
+  <data name="comboquantity.Items283" xml:space="preserve">
+    <value>284</value>
+  </data>
+  <data name="comboquantity.Items284" xml:space="preserve">
+    <value>285</value>
+  </data>
+  <data name="comboquantity.Items285" xml:space="preserve">
+    <value>286</value>
+  </data>
+  <data name="comboquantity.Items286" xml:space="preserve">
+    <value>287</value>
+  </data>
+  <data name="comboquantity.Items287" xml:space="preserve">
+    <value>288</value>
+  </data>
+  <data name="comboquantity.Items288" xml:space="preserve">
+    <value>289</value>
+  </data>
+  <data name="comboquantity.Items289" xml:space="preserve">
+    <value>290</value>
+  </data>
+  <data name="comboquantity.Items29" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="comboquantity.Items290" xml:space="preserve">
+    <value>291</value>
+  </data>
+  <data name="comboquantity.Items291" xml:space="preserve">
+    <value>292</value>
+  </data>
+  <data name="comboquantity.Items292" xml:space="preserve">
+    <value>293</value>
+  </data>
+  <data name="comboquantity.Items293" xml:space="preserve">
+    <value>294</value>
+  </data>
+  <data name="comboquantity.Items294" xml:space="preserve">
+    <value>295</value>
+  </data>
+  <data name="comboquantity.Items295" xml:space="preserve">
+    <value>296</value>
+  </data>
+  <data name="comboquantity.Items296" xml:space="preserve">
+    <value>297</value>
+  </data>
+  <data name="comboquantity.Items297" xml:space="preserve">
+    <value>298</value>
+  </data>
+  <data name="comboquantity.Items298" xml:space="preserve">
+    <value>299</value>
+  </data>
+  <data name="comboquantity.Items299" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="comboquantity.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboquantity.Items30" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="comboquantity.Items300" xml:space="preserve">
+    <value>301</value>
+  </data>
+  <data name="comboquantity.Items301" xml:space="preserve">
+    <value>302</value>
+  </data>
+  <data name="comboquantity.Items302" xml:space="preserve">
+    <value>303</value>
+  </data>
+  <data name="comboquantity.Items303" xml:space="preserve">
+    <value>304</value>
+  </data>
+  <data name="comboquantity.Items304" xml:space="preserve">
+    <value>305</value>
+  </data>
+  <data name="comboquantity.Items305" xml:space="preserve">
+    <value>306</value>
+  </data>
+  <data name="comboquantity.Items306" xml:space="preserve">
+    <value>307</value>
+  </data>
+  <data name="comboquantity.Items307" xml:space="preserve">
+    <value>308</value>
+  </data>
+  <data name="comboquantity.Items308" xml:space="preserve">
+    <value>309</value>
+  </data>
+  <data name="comboquantity.Items309" xml:space="preserve">
+    <value>310</value>
+  </data>
+  <data name="comboquantity.Items31" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="comboquantity.Items310" xml:space="preserve">
+    <value>311</value>
+  </data>
+  <data name="comboquantity.Items311" xml:space="preserve">
+    <value>312</value>
+  </data>
+  <data name="comboquantity.Items312" xml:space="preserve">
+    <value>313</value>
+  </data>
+  <data name="comboquantity.Items313" xml:space="preserve">
+    <value>314</value>
+  </data>
+  <data name="comboquantity.Items314" xml:space="preserve">
+    <value>315</value>
+  </data>
+  <data name="comboquantity.Items315" xml:space="preserve">
+    <value>316</value>
+  </data>
+  <data name="comboquantity.Items316" xml:space="preserve">
+    <value>317</value>
+  </data>
+  <data name="comboquantity.Items317" xml:space="preserve">
+    <value>318</value>
+  </data>
+  <data name="comboquantity.Items318" xml:space="preserve">
+    <value>319</value>
+  </data>
+  <data name="comboquantity.Items319" xml:space="preserve">
+    <value>320</value>
+  </data>
+  <data name="comboquantity.Items32" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="comboquantity.Items320" xml:space="preserve">
+    <value>321</value>
+  </data>
+  <data name="comboquantity.Items321" xml:space="preserve">
+    <value>322</value>
+  </data>
+  <data name="comboquantity.Items322" xml:space="preserve">
+    <value>323</value>
+  </data>
+  <data name="comboquantity.Items323" xml:space="preserve">
+    <value>324</value>
+  </data>
+  <data name="comboquantity.Items324" xml:space="preserve">
+    <value>325</value>
+  </data>
+  <data name="comboquantity.Items325" xml:space="preserve">
+    <value>326</value>
+  </data>
+  <data name="comboquantity.Items326" xml:space="preserve">
+    <value>327</value>
+  </data>
+  <data name="comboquantity.Items327" xml:space="preserve">
+    <value>328</value>
+  </data>
+  <data name="comboquantity.Items328" xml:space="preserve">
+    <value>329</value>
+  </data>
+  <data name="comboquantity.Items329" xml:space="preserve">
+    <value>330</value>
+  </data>
+  <data name="comboquantity.Items33" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="comboquantity.Items330" xml:space="preserve">
+    <value>331</value>
+  </data>
+  <data name="comboquantity.Items331" xml:space="preserve">
+    <value>332</value>
+  </data>
+  <data name="comboquantity.Items332" xml:space="preserve">
+    <value>333</value>
+  </data>
+  <data name="comboquantity.Items333" xml:space="preserve">
+    <value>334</value>
+  </data>
+  <data name="comboquantity.Items334" xml:space="preserve">
+    <value>335</value>
+  </data>
+  <data name="comboquantity.Items335" xml:space="preserve">
+    <value>336</value>
+  </data>
+  <data name="comboquantity.Items336" xml:space="preserve">
+    <value>337</value>
+  </data>
+  <data name="comboquantity.Items337" xml:space="preserve">
+    <value>338</value>
+  </data>
+  <data name="comboquantity.Items338" xml:space="preserve">
+    <value>339</value>
+  </data>
+  <data name="comboquantity.Items339" xml:space="preserve">
+    <value>340</value>
+  </data>
+  <data name="comboquantity.Items34" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="comboquantity.Items340" xml:space="preserve">
+    <value>341</value>
+  </data>
+  <data name="comboquantity.Items341" xml:space="preserve">
+    <value>342</value>
+  </data>
+  <data name="comboquantity.Items342" xml:space="preserve">
+    <value>343</value>
+  </data>
+  <data name="comboquantity.Items343" xml:space="preserve">
+    <value>344</value>
+  </data>
+  <data name="comboquantity.Items344" xml:space="preserve">
+    <value>345</value>
+  </data>
+  <data name="comboquantity.Items345" xml:space="preserve">
+    <value>346</value>
+  </data>
+  <data name="comboquantity.Items346" xml:space="preserve">
+    <value>347</value>
+  </data>
+  <data name="comboquantity.Items347" xml:space="preserve">
+    <value>348</value>
+  </data>
+  <data name="comboquantity.Items348" xml:space="preserve">
+    <value>349</value>
+  </data>
+  <data name="comboquantity.Items349" xml:space="preserve">
+    <value>350</value>
+  </data>
+  <data name="comboquantity.Items35" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="comboquantity.Items350" xml:space="preserve">
+    <value>351</value>
+  </data>
+  <data name="comboquantity.Items351" xml:space="preserve">
+    <value>352</value>
+  </data>
+  <data name="comboquantity.Items352" xml:space="preserve">
+    <value>353</value>
+  </data>
+  <data name="comboquantity.Items353" xml:space="preserve">
+    <value>354</value>
+  </data>
+  <data name="comboquantity.Items354" xml:space="preserve">
+    <value>355</value>
+  </data>
+  <data name="comboquantity.Items355" xml:space="preserve">
+    <value>356</value>
+  </data>
+  <data name="comboquantity.Items356" xml:space="preserve">
+    <value>357</value>
+  </data>
+  <data name="comboquantity.Items357" xml:space="preserve">
+    <value>358</value>
+  </data>
+  <data name="comboquantity.Items358" xml:space="preserve">
+    <value>359</value>
+  </data>
+  <data name="comboquantity.Items359" xml:space="preserve">
+    <value>360</value>
+  </data>
+  <data name="comboquantity.Items36" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="comboquantity.Items360" xml:space="preserve">
+    <value>361</value>
+  </data>
+  <data name="comboquantity.Items361" xml:space="preserve">
+    <value>362</value>
+  </data>
+  <data name="comboquantity.Items362" xml:space="preserve">
+    <value>363</value>
+  </data>
+  <data name="comboquantity.Items363" xml:space="preserve">
+    <value>364</value>
+  </data>
+  <data name="comboquantity.Items364" xml:space="preserve">
+    <value>365</value>
+  </data>
+  <data name="comboquantity.Items365" xml:space="preserve">
+    <value>366</value>
+  </data>
+  <data name="comboquantity.Items366" xml:space="preserve">
+    <value>367</value>
+  </data>
+  <data name="comboquantity.Items367" xml:space="preserve">
+    <value>368</value>
+  </data>
+  <data name="comboquantity.Items368" xml:space="preserve">
+    <value>369</value>
+  </data>
+  <data name="comboquantity.Items369" xml:space="preserve">
+    <value>370</value>
+  </data>
+  <data name="comboquantity.Items37" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="comboquantity.Items370" xml:space="preserve">
+    <value>371</value>
+  </data>
+  <data name="comboquantity.Items371" xml:space="preserve">
+    <value>372</value>
+  </data>
+  <data name="comboquantity.Items372" xml:space="preserve">
+    <value>373</value>
+  </data>
+  <data name="comboquantity.Items373" xml:space="preserve">
+    <value>374</value>
+  </data>
+  <data name="comboquantity.Items374" xml:space="preserve">
+    <value>375</value>
+  </data>
+  <data name="comboquantity.Items375" xml:space="preserve">
+    <value>376</value>
+  </data>
+  <data name="comboquantity.Items376" xml:space="preserve">
+    <value>377</value>
+  </data>
+  <data name="comboquantity.Items377" xml:space="preserve">
+    <value>378</value>
+  </data>
+  <data name="comboquantity.Items378" xml:space="preserve">
+    <value>379</value>
+  </data>
+  <data name="comboquantity.Items379" xml:space="preserve">
+    <value>380</value>
+  </data>
+  <data name="comboquantity.Items38" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="comboquantity.Items380" xml:space="preserve">
+    <value>381</value>
+  </data>
+  <data name="comboquantity.Items381" xml:space="preserve">
+    <value>382</value>
+  </data>
+  <data name="comboquantity.Items382" xml:space="preserve">
+    <value>383</value>
+  </data>
+  <data name="comboquantity.Items383" xml:space="preserve">
+    <value>384</value>
+  </data>
+  <data name="comboquantity.Items384" xml:space="preserve">
+    <value>385</value>
+  </data>
+  <data name="comboquantity.Items385" xml:space="preserve">
+    <value>386</value>
+  </data>
+  <data name="comboquantity.Items386" xml:space="preserve">
+    <value>387</value>
+  </data>
+  <data name="comboquantity.Items387" xml:space="preserve">
+    <value>388</value>
+  </data>
+  <data name="comboquantity.Items388" xml:space="preserve">
+    <value>389</value>
+  </data>
+  <data name="comboquantity.Items389" xml:space="preserve">
+    <value>390</value>
+  </data>
+  <data name="comboquantity.Items39" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="comboquantity.Items390" xml:space="preserve">
+    <value>391</value>
+  </data>
+  <data name="comboquantity.Items391" xml:space="preserve">
+    <value>392</value>
+  </data>
+  <data name="comboquantity.Items392" xml:space="preserve">
+    <value>393</value>
+  </data>
+  <data name="comboquantity.Items393" xml:space="preserve">
+    <value>394</value>
+  </data>
+  <data name="comboquantity.Items394" xml:space="preserve">
+    <value>395</value>
+  </data>
+  <data name="comboquantity.Items395" xml:space="preserve">
+    <value>396</value>
+  </data>
+  <data name="comboquantity.Items396" xml:space="preserve">
+    <value>397</value>
+  </data>
+  <data name="comboquantity.Items397" xml:space="preserve">
+    <value>398</value>
+  </data>
+  <data name="comboquantity.Items398" xml:space="preserve">
+    <value>399</value>
+  </data>
+  <data name="comboquantity.Items399" xml:space="preserve">
+    <value>400</value>
+  </data>
+  <data name="comboquantity.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="comboquantity.Items40" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="comboquantity.Items400" xml:space="preserve">
+    <value>401</value>
+  </data>
+  <data name="comboquantity.Items401" xml:space="preserve">
+    <value>402</value>
+  </data>
+  <data name="comboquantity.Items402" xml:space="preserve">
+    <value>403</value>
+  </data>
+  <data name="comboquantity.Items403" xml:space="preserve">
+    <value>404</value>
+  </data>
+  <data name="comboquantity.Items404" xml:space="preserve">
+    <value>405</value>
+  </data>
+  <data name="comboquantity.Items405" xml:space="preserve">
+    <value>406</value>
+  </data>
+  <data name="comboquantity.Items406" xml:space="preserve">
+    <value>407</value>
+  </data>
+  <data name="comboquantity.Items407" xml:space="preserve">
+    <value>408</value>
+  </data>
+  <data name="comboquantity.Items408" xml:space="preserve">
+    <value>409</value>
+  </data>
+  <data name="comboquantity.Items409" xml:space="preserve">
+    <value>410</value>
+  </data>
+  <data name="comboquantity.Items41" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="comboquantity.Items410" xml:space="preserve">
+    <value>411</value>
+  </data>
+  <data name="comboquantity.Items411" xml:space="preserve">
+    <value>412</value>
+  </data>
+  <data name="comboquantity.Items412" xml:space="preserve">
+    <value>413</value>
+  </data>
+  <data name="comboquantity.Items413" xml:space="preserve">
+    <value>414</value>
+  </data>
+  <data name="comboquantity.Items414" xml:space="preserve">
+    <value>415</value>
+  </data>
+  <data name="comboquantity.Items415" xml:space="preserve">
+    <value>416</value>
+  </data>
+  <data name="comboquantity.Items416" xml:space="preserve">
+    <value>417</value>
+  </data>
+  <data name="comboquantity.Items417" xml:space="preserve">
+    <value>418</value>
+  </data>
+  <data name="comboquantity.Items418" xml:space="preserve">
+    <value>419</value>
+  </data>
+  <data name="comboquantity.Items419" xml:space="preserve">
+    <value>420</value>
+  </data>
+  <data name="comboquantity.Items42" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="comboquantity.Items420" xml:space="preserve">
+    <value>421</value>
+  </data>
+  <data name="comboquantity.Items421" xml:space="preserve">
+    <value>422</value>
+  </data>
+  <data name="comboquantity.Items422" xml:space="preserve">
+    <value>423</value>
+  </data>
+  <data name="comboquantity.Items423" xml:space="preserve">
+    <value>424</value>
+  </data>
+  <data name="comboquantity.Items424" xml:space="preserve">
+    <value>425</value>
+  </data>
+  <data name="comboquantity.Items425" xml:space="preserve">
+    <value>426</value>
+  </data>
+  <data name="comboquantity.Items426" xml:space="preserve">
+    <value>427</value>
+  </data>
+  <data name="comboquantity.Items427" xml:space="preserve">
+    <value>428</value>
+  </data>
+  <data name="comboquantity.Items428" xml:space="preserve">
+    <value>429</value>
+  </data>
+  <data name="comboquantity.Items429" xml:space="preserve">
+    <value>430</value>
+  </data>
+  <data name="comboquantity.Items43" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="comboquantity.Items430" xml:space="preserve">
+    <value>431</value>
+  </data>
+  <data name="comboquantity.Items431" xml:space="preserve">
+    <value>432</value>
+  </data>
+  <data name="comboquantity.Items432" xml:space="preserve">
+    <value>433</value>
+  </data>
+  <data name="comboquantity.Items433" xml:space="preserve">
+    <value>434</value>
+  </data>
+  <data name="comboquantity.Items434" xml:space="preserve">
+    <value>435</value>
+  </data>
+  <data name="comboquantity.Items435" xml:space="preserve">
+    <value>436</value>
+  </data>
+  <data name="comboquantity.Items436" xml:space="preserve">
+    <value>437</value>
+  </data>
+  <data name="comboquantity.Items437" xml:space="preserve">
+    <value>438</value>
+  </data>
+  <data name="comboquantity.Items438" xml:space="preserve">
+    <value>439</value>
+  </data>
+  <data name="comboquantity.Items439" xml:space="preserve">
+    <value>440</value>
+  </data>
+  <data name="comboquantity.Items44" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="comboquantity.Items440" xml:space="preserve">
+    <value>441</value>
+  </data>
+  <data name="comboquantity.Items441" xml:space="preserve">
+    <value>442</value>
+  </data>
+  <data name="comboquantity.Items442" xml:space="preserve">
+    <value>443</value>
+  </data>
+  <data name="comboquantity.Items443" xml:space="preserve">
+    <value>444</value>
+  </data>
+  <data name="comboquantity.Items444" xml:space="preserve">
+    <value>445</value>
+  </data>
+  <data name="comboquantity.Items445" xml:space="preserve">
+    <value>446</value>
+  </data>
+  <data name="comboquantity.Items446" xml:space="preserve">
+    <value>447</value>
+  </data>
+  <data name="comboquantity.Items447" xml:space="preserve">
+    <value>448</value>
+  </data>
+  <data name="comboquantity.Items448" xml:space="preserve">
+    <value>449</value>
+  </data>
+  <data name="comboquantity.Items449" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="comboquantity.Items45" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="comboquantity.Items450" xml:space="preserve">
+    <value>451</value>
+  </data>
+  <data name="comboquantity.Items451" xml:space="preserve">
+    <value>452</value>
+  </data>
+  <data name="comboquantity.Items452" xml:space="preserve">
+    <value>453</value>
+  </data>
+  <data name="comboquantity.Items453" xml:space="preserve">
+    <value>454</value>
+  </data>
+  <data name="comboquantity.Items454" xml:space="preserve">
+    <value>455</value>
+  </data>
+  <data name="comboquantity.Items455" xml:space="preserve">
+    <value>456</value>
+  </data>
+  <data name="comboquantity.Items456" xml:space="preserve">
+    <value>457</value>
+  </data>
+  <data name="comboquantity.Items457" xml:space="preserve">
+    <value>458</value>
+  </data>
+  <data name="comboquantity.Items458" xml:space="preserve">
+    <value>459</value>
+  </data>
+  <data name="comboquantity.Items459" xml:space="preserve">
+    <value>460</value>
+  </data>
+  <data name="comboquantity.Items46" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="comboquantity.Items460" xml:space="preserve">
+    <value>461</value>
+  </data>
+  <data name="comboquantity.Items461" xml:space="preserve">
+    <value>462</value>
+  </data>
+  <data name="comboquantity.Items462" xml:space="preserve">
+    <value>463</value>
+  </data>
+  <data name="comboquantity.Items463" xml:space="preserve">
+    <value>464</value>
+  </data>
+  <data name="comboquantity.Items464" xml:space="preserve">
+    <value>465</value>
+  </data>
+  <data name="comboquantity.Items465" xml:space="preserve">
+    <value>466</value>
+  </data>
+  <data name="comboquantity.Items466" xml:space="preserve">
+    <value>467</value>
+  </data>
+  <data name="comboquantity.Items467" xml:space="preserve">
+    <value>468</value>
+  </data>
+  <data name="comboquantity.Items468" xml:space="preserve">
+    <value>469</value>
+  </data>
+  <data name="comboquantity.Items469" xml:space="preserve">
+    <value>470</value>
+  </data>
+  <data name="comboquantity.Items47" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="comboquantity.Items470" xml:space="preserve">
+    <value>471</value>
+  </data>
+  <data name="comboquantity.Items471" xml:space="preserve">
+    <value>472</value>
+  </data>
+  <data name="comboquantity.Items472" xml:space="preserve">
+    <value>473</value>
+  </data>
+  <data name="comboquantity.Items473" xml:space="preserve">
+    <value>474</value>
+  </data>
+  <data name="comboquantity.Items474" xml:space="preserve">
+    <value>475</value>
+  </data>
+  <data name="comboquantity.Items475" xml:space="preserve">
+    <value>476</value>
+  </data>
+  <data name="comboquantity.Items476" xml:space="preserve">
+    <value>477</value>
+  </data>
+  <data name="comboquantity.Items477" xml:space="preserve">
+    <value>478</value>
+  </data>
+  <data name="comboquantity.Items478" xml:space="preserve">
+    <value>479</value>
+  </data>
+  <data name="comboquantity.Items479" xml:space="preserve">
+    <value>480</value>
+  </data>
+  <data name="comboquantity.Items48" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="comboquantity.Items480" xml:space="preserve">
+    <value>481</value>
+  </data>
+  <data name="comboquantity.Items481" xml:space="preserve">
+    <value>482</value>
+  </data>
+  <data name="comboquantity.Items482" xml:space="preserve">
+    <value>483</value>
+  </data>
+  <data name="comboquantity.Items483" xml:space="preserve">
+    <value>484</value>
+  </data>
+  <data name="comboquantity.Items484" xml:space="preserve">
+    <value>485</value>
+  </data>
+  <data name="comboquantity.Items485" xml:space="preserve">
+    <value>486</value>
+  </data>
+  <data name="comboquantity.Items486" xml:space="preserve">
+    <value>487</value>
+  </data>
+  <data name="comboquantity.Items487" xml:space="preserve">
+    <value>488</value>
+  </data>
+  <data name="comboquantity.Items488" xml:space="preserve">
+    <value>489</value>
+  </data>
+  <data name="comboquantity.Items489" xml:space="preserve">
+    <value>490</value>
+  </data>
+  <data name="comboquantity.Items49" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="comboquantity.Items490" xml:space="preserve">
+    <value>491</value>
+  </data>
+  <data name="comboquantity.Items491" xml:space="preserve">
+    <value>492</value>
+  </data>
+  <data name="comboquantity.Items492" xml:space="preserve">
+    <value>493</value>
+  </data>
+  <data name="comboquantity.Items493" xml:space="preserve">
+    <value>494</value>
+  </data>
+  <data name="comboquantity.Items494" xml:space="preserve">
+    <value>495</value>
+  </data>
+  <data name="comboquantity.Items495" xml:space="preserve">
+    <value>496</value>
+  </data>
+  <data name="comboquantity.Items496" xml:space="preserve">
+    <value>497</value>
+  </data>
+  <data name="comboquantity.Items497" xml:space="preserve">
+    <value>498</value>
+  </data>
+  <data name="comboquantity.Items498" xml:space="preserve">
+    <value>499</value>
+  </data>
+  <data name="comboquantity.Items499" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="comboquantity.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="comboquantity.Items50" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="comboquantity.Items51" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="comboquantity.Items52" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="comboquantity.Items53" xml:space="preserve">
+    <value>54</value>
+  </data>
+  <data name="comboquantity.Items54" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="comboquantity.Items55" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="comboquantity.Items56" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <data name="comboquantity.Items57" xml:space="preserve">
+    <value>58</value>
+  </data>
+  <data name="comboquantity.Items58" xml:space="preserve">
+    <value>59</value>
+  </data>
+  <data name="comboquantity.Items59" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="comboquantity.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="comboquantity.Items60" xml:space="preserve">
+    <value>61</value>
+  </data>
+  <data name="comboquantity.Items61" xml:space="preserve">
+    <value>62</value>
+  </data>
+  <data name="comboquantity.Items62" xml:space="preserve">
+    <value>63</value>
+  </data>
+  <data name="comboquantity.Items63" xml:space="preserve">
+    <value>64</value>
+  </data>
+  <data name="comboquantity.Items64" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="comboquantity.Items65" xml:space="preserve">
+    <value>66</value>
+  </data>
+  <data name="comboquantity.Items66" xml:space="preserve">
+    <value>67</value>
+  </data>
+  <data name="comboquantity.Items67" xml:space="preserve">
+    <value>68</value>
+  </data>
+  <data name="comboquantity.Items68" xml:space="preserve">
+    <value>69</value>
+  </data>
+  <data name="comboquantity.Items69" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="comboquantity.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="comboquantity.Items70" xml:space="preserve">
+    <value>71</value>
+  </data>
+  <data name="comboquantity.Items71" xml:space="preserve">
+    <value>72</value>
+  </data>
+  <data name="comboquantity.Items72" xml:space="preserve">
+    <value>73</value>
+  </data>
+  <data name="comboquantity.Items73" xml:space="preserve">
+    <value>74</value>
+  </data>
+  <data name="comboquantity.Items74" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="comboquantity.Items75" xml:space="preserve">
+    <value>76</value>
+  </data>
+  <data name="comboquantity.Items76" xml:space="preserve">
+    <value>77</value>
+  </data>
+  <data name="comboquantity.Items77" xml:space="preserve">
+    <value>78</value>
+  </data>
+  <data name="comboquantity.Items78" xml:space="preserve">
+    <value>79</value>
+  </data>
+  <data name="comboquantity.Items79" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="comboquantity.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="comboquantity.Items80" xml:space="preserve">
+    <value>81</value>
+  </data>
+  <data name="comboquantity.Items81" xml:space="preserve">
+    <value>82</value>
+  </data>
+  <data name="comboquantity.Items82" xml:space="preserve">
+    <value>83</value>
+  </data>
+  <data name="comboquantity.Items83" xml:space="preserve">
+    <value>84</value>
+  </data>
+  <data name="comboquantity.Items84" xml:space="preserve">
+    <value>85</value>
+  </data>
+  <data name="comboquantity.Items85" xml:space="preserve">
+    <value>86</value>
+  </data>
+  <data name="comboquantity.Items86" xml:space="preserve">
+    <value>87</value>
+  </data>
+  <data name="comboquantity.Items87" xml:space="preserve">
+    <value>88</value>
+  </data>
+  <data name="comboquantity.Items88" xml:space="preserve">
+    <value>89</value>
+  </data>
+  <data name="comboquantity.Items89" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="comboquantity.Items9" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="comboquantity.Items90" xml:space="preserve">
+    <value>91</value>
+  </data>
+  <data name="comboquantity.Items91" xml:space="preserve">
+    <value>92</value>
+  </data>
+  <data name="comboquantity.Items92" xml:space="preserve">
+    <value>93</value>
+  </data>
+  <data name="comboquantity.Items93" xml:space="preserve">
+    <value>94</value>
+  </data>
+  <data name="comboquantity.Items94" xml:space="preserve">
+    <value>95</value>
+  </data>
+  <data name="comboquantity.Items95" xml:space="preserve">
+    <value>96</value>
+  </data>
+  <data name="comboquantity.Items96" xml:space="preserve">
+    <value>97</value>
+  </data>
+  <data name="comboquantity.Items97" xml:space="preserve">
+    <value>98</value>
+  </data>
+  <data name="comboquantity.Items98" xml:space="preserve">
+    <value>99</value>
+  </data>
+  <data name="comboquantity.Items99" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="labelpanier.Text" xml:space="preserve">
+    <value>CART</value>
+  </data>
+  <data name="quantity.Text" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="remove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="store.Text" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="update.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+</root>

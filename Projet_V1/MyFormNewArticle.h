@@ -277,11 +277,11 @@ private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, Sys
 			this->comboBox1->Items->Add(this->dataGridView1->Rows[i]->Cells[1]->Value);
 		}
 	}
-	private: System::Void MyFormCreate_Load_Nature(System::Object^ sender, System::EventArgs^ e) {
+	/*private: System::Void MyFormCreate_Load_Nature(System::Object^ sender, System::EventArgs^ e) {
 		this->dataGridView1->Refresh();
 		this->oDs = this->oSvc->SelectAllTheStaff("_client");
 		this->dataGridView1->DataSource = this->oDs;
 		this->dataGridView1->DataMember = "_client";
-	}
+	}*/
 };
 }

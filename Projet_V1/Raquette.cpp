@@ -225,10 +225,10 @@ System::String^ NS_Comp_Mappage::Stock_manager::getQuantitySold(void) { return t
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //												Nature_manager												//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-System::String^ NS_Comp_Mappage::Nature_manager::Select_Nature(void)
-{
-	return "SELECT * FROM [Projet_V1].[dbo].[nature]";
-}
+//System::String^ NS_Comp_Mappage::Nature_manager::Select_Nature(void)
+//{
+//	return "SELECT * FROM [Projet_V1].[dbo].[nature]";
+//}
 
 //---------------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------------------------------------------------
@@ -237,7 +237,7 @@ NS_Comp_Svc::CLservices::CLservices(void)
 	this->oCad = gcnew NS_Comp_Data::CLcad();
 	this->oMappStaff = gcnew NS_Comp_Mappage::Staff_manager();
 	this->oMappAddress = gcnew NS_Comp_Mappage::Address_manager();
-	this->oMappNature = gcnew NS_Comp_Mappage::Nature_manager();
+	//this->oMappNature = gcnew NS_Comp_Mappage::Nature_manager();
 }
 //---------------------------------------------------------------------------------------------------------------------------
 
@@ -283,12 +283,12 @@ void NS_Comp_Svc::CLservices::AddAddress(System::String^ address, System::String
 }
 
 //---------------------------------------------------------------------------------------------------
-System::Data::DataSet^ NS_Comp_Svc::CLservices::SelectAllTheNature(System::String^ dataTableName)
-{
-	System::String^ sql;
-
-	sql = this->oMappNature.
-	return this->oCad->getRows(sql, dataTableName);
-}
+//System::Data::DataSet^ NS_Comp_Svc::CLservices::SelectAllTheNature(System::String^ dataTableName)
+//{
+//	System::String^ sql;
+//
+//	sql = this->oMappNature->Select_Nature();
+//	return this->oCad->getRows(sql, dataTableName);
+//}
 //---------------------------------------------------------------------------------------------------
 

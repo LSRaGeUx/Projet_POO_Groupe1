@@ -4,6 +4,7 @@
 #include "MyFormUpdateClient.h"
 #include "MyFormSearch.h"
 #include "MyFormNewArticle.h"
+#include "MyFormCreateCommand.h"
 #include "Connexion_DB.h"
 #include "Raquette.h"
 
@@ -232,6 +233,8 @@ namespace ProjetV1 {
 			this->createToolStripMenuItem1->Name = L"createToolStripMenuItem1";
 			this->createToolStripMenuItem1->Size = System::Drawing::Size(139, 26);
 			this->createToolStripMenuItem1->Text = L"Create";
+			this->createToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyMainForm::Create_Command_Click);
+
 			// 
 			// modifyToolStripMenuItem1
 			// 
@@ -310,7 +313,7 @@ namespace ProjetV1 {
 #pragma endregion
 	private: System::Void Create_New_Staff_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyFormNewStaff^ new_staff = gcnew MyFormNewStaff();
-		new_staff->Show();
+		new_staff->Close();
 	}
 	private: System::Void Create_Client_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyFormNewClient^ create_client = gcnew MyFormNewClient();
@@ -327,6 +330,10 @@ namespace ProjetV1 {
 	private: System::Void Create_Stock_Click(System::Object^ sender, System::EventArgs^ e) {
 		MyFormNewArticle^ create_stock = gcnew MyFormNewArticle();
 		create_stock->Show();
+	}
+	private: System::Void Create_Command_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormCreateCommand^ create_command = gcnew MyFormCreateCommand();
+		create_command->Show();
 	}
 
 

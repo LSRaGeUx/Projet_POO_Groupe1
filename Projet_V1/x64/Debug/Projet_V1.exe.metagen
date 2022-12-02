@@ -1,3 +1,4 @@
+  ProjetV1.MyFormCreateCommand.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewArticle.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewClient.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewStaff.resources - Embedded, ContainedInManifestFile, 
@@ -33,6 +34,9 @@ Class ProjetV1.MyFormSearch: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ProjetV1.MyFormNewArticle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class PROJETPOO.MyFormCreateCommand: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ProjetV1.MyMainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

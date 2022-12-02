@@ -492,7 +492,7 @@ namespace ProjetV1 {
 	private: System::Void AddCbx(System::Object^ sender, System::EventArgs^ e) {
 		this->cbx_select_client->Items->Clear();
 		for (int i = 0; i < (this->dataGridView1->RowCount)-1; i++) {
-			this->cbx_select_client->Items->Add(this->dataGridView1->Rows[i]->Cells[1]->Value) + "" +
+			this->cbx_select_client->Items->Add(this->dataGridView1->Rows[i]->Cells[1]->Value + "" +
 			this->dataGridView1->Rows[i]->Cells[2]->Value);
 		}
 	}
