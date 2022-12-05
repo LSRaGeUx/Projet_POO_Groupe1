@@ -41,7 +41,7 @@
     <ClInclude Include="MyFormUpdateClient.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyFormSearch.h">
+    <ClInclude Include="MyFormClientSearch.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="MyFormNewClient.h">
@@ -58,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormError0107.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

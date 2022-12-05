@@ -12,6 +12,7 @@ namespace NS_Comp_Mappage
 	public:
 		System::String^ Select_staff(void);
 		System::String^ Insert_staff(void);
+		System::String^ Insert_has_staff_address(void);
 		System::String^ Delete_staff(void);
 		System::String^ Update_staff(void);
 
@@ -141,6 +142,23 @@ namespace NS_Comp_Mappage
 		System::String^ getQuantitySold(void);
 	};
 
+	/*ref class has_type_address_manager {
+	private:
+		int^ id_type;
+		int^ id_address;
+
+	public:
+		System::String^ Insert_stock(void);
+		System::String^ Delete_stock(void);
+		System::String^ Update_stock(void);
+
+
+		void setIdType(int^);
+		void setIdAddress(int^);
+
+		int^ getIdType(void);
+		int^ getIdAddress(void);
+	};*/
 	/*ref class Nature_manager {
 		System::String^ nature_type;
 
@@ -161,15 +179,17 @@ namespace NS_Comp_Svc
 	private:
 		NS_Comp_Data::CLcad^ oCad;
 		NS_Comp_Mappage::Staff_manager^ oMappStaff;
+		NS_Comp_Mappage::Client_manager^ oMappClient;
 		NS_Comp_Mappage::Address_manager^ oMappAddress;
 		//NS_Comp_Mappage::Nature_manager^ oMappNature;
 	public:
 		CLservices(void);
 		System::Data::DataSet^ SelectAllTheStaff(System::String^);
+		System::Data::DataSet^ SelectAllTheClient(System::String^);
 		//System::Data::DataSet^ SelectAllTheNature(System::String^);
 		System::Data::DataSet^ SelectAllTheAddress(System::String^);
 		void AddStaffMember(System::String^, System::String^, System::String^);
-		void AddAddress(System::String^, System::String^, System::String^);
+		void AddAddress(System::String^, System::String^, System::String^, System::String^);
 	};
 };
 

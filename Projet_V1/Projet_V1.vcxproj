@@ -127,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Connexion_DB.h" />
+    <ClInclude Include="MyFormError0107.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyFormCreateCommand.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -136,7 +139,7 @@
     <ClInclude Include="MyFormNewClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyFormSearch.h">
+    <ClInclude Include="MyFormClientSearch.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormUpdateClient.h">
@@ -155,6 +158,9 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MyFormError0107.resx">
+      <DependentUpon>MyFormError0107.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormCreateCommand.resx" />
     <EmbeddedResource Include="MyFormNewArticle.resx">
       <DependentUpon>MyFormNewArticle.h</DependentUpon>
@@ -165,11 +171,11 @@
     <EmbeddedResource Include="MyFormNewStaff.resx">
       <DependentUpon>MyFormNewStaff.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFormSearch.en-GB.resx">
-      <DependentUpon>MyFormSearch.h</DependentUpon>
+    <EmbeddedResource Include="MyFormClientSearch.en-GB.resx">
+      <DependentUpon>MyFormClientSearch.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFormSearch.resx">
-      <DependentUpon>MyFormSearch.h</DependentUpon>
+    <EmbeddedResource Include="MyFormClientSearch.resx">
+      <DependentUpon>MyFormClientSearch.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormUpdateClient.resx">
       <DependentUpon>MyFormUpdateClient.h</DependentUpon>

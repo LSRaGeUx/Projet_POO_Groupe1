@@ -1,6 +1,7 @@
 #pragma once
 #include "Raquette.h"
 #include "Connexion_DB.h"
+#include "MyFormError0107.h"
 
 namespace ProjetV1 {
 
@@ -40,6 +41,7 @@ namespace ProjetV1 {
 	protected:
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
+	private: NS_Comp_Data::CLcad^ db_sql;
 	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
 	private: System::Windows::Forms::DataGridView^ dgv_enr;
 	private: System::Windows::Forms::Label^ label1;
@@ -55,6 +57,10 @@ namespace ProjetV1 {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip2;
+	private: System::Windows::Forms::Label^ label7;
+
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -70,6 +76,9 @@ namespace ProjetV1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->oDs = (gcnew System::Data::DataSet());
+			this->oSvc = (gcnew NS_Comp_Svc::CLservices());
+			this->db_sql = (gcnew NS_Comp_Data::CLcad());
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyFormNewStaff::typeid));
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
@@ -87,6 +96,9 @@ namespace ProjetV1 {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->contextMenuStrip2 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -114,8 +126,6 @@ namespace ProjetV1 {
 			this->label1->Size = System::Drawing::Size(72, 16);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"First Name";
-			this->label1->Click += gcnew System::EventHandler(this, &MyFormNewStaff::label1_Click);
-			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
@@ -163,7 +173,7 @@ namespace ProjetV1 {
 			this->btn_Create->TabIndex = 8;
 			this->btn_Create->Text = L"Create";
 			this->btn_Create->UseVisualStyleBackColor = true;
-			this->btn_Create->Click += gcnew System::EventHandler(this, &MyFormNewStaff::btn_insert_Click);
+			this->btn_Create->Click += gcnew System::EventHandler(this, &MyFormNewStaff::btn_create_Click);
 			// 
 			// textBox1
 			// 
@@ -185,7 +195,6 @@ namespace ProjetV1 {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(96, 22);
 			this->textBox3->TabIndex = 11;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyFormNewStaff::textBox3_TextChanged);
 			// 
 			// label4
 			// 
@@ -195,7 +204,6 @@ namespace ProjetV1 {
 			this->label4->Size = System::Drawing::Size(58, 16);
 			this->label4->TabIndex = 12;
 			this->label4->Text = L"Address";
-			this->label4->Click += gcnew System::EventHandler(this, &MyFormNewStaff::label4_Click);
 			// 
 			// label5
 			// 
@@ -215,11 +223,35 @@ namespace ProjetV1 {
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"ZIP code";
 			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(314, 176);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(136, 22);
+			this->textBox4->TabIndex = 15;
+			// 
+			// contextMenuStrip2
+			// 
+			this->contextMenuStrip2->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->contextMenuStrip2->Name = L"contextMenuStrip2";
+			this->contextMenuStrip2->Size = System::Drawing::Size(61, 4);
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(252, 179);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(52, 16);
+			this->label7->TabIndex = 17;
+			this->label7->Text = L"Country";
+			// 
 			// MyFormNewStaff
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleDimensions = System::Drawing::SizeF(120, 120);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			this->ClientSize = System::Drawing::Size(661, 475);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -237,26 +269,46 @@ namespace ProjetV1 {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyFormNewStaff";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyFormNewStaff::MyFormNewStaff_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void btn_create_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->SelectAllTheStaff("_client");
-		this->dgv_enr->DataSource = this->oDs;
-		this->dgv_enr->DataMember = "_client";
-	//this->oSvc->ajouterUnePersonne(this->last_name->Text, this->first_name->Text);
-	//this->oSvc->ajouterUneAdresse(this->txt_adresse->Text, this->txt_city->Text, this->txt_zip->Text);
+		if (!System::String::IsNullOrEmpty(this->last_name->Text) && 
+			!System::String::IsNullOrEmpty(this->first_name->Text) && 
+			!System::String::IsNullOrEmpty(this->hire_date->Text) && 
+			!System::String::IsNullOrEmpty(this->textBox1->Text) && 
+			!System::String::IsNullOrEmpty(this->textBox2->Text) && 
+			!System::String::IsNullOrEmpty(this->textBox3->Text) &&
+			!System::String::IsNullOrEmpty(this->textBox4->Text)) {
+			this->db_sql->actionRows("INSERT INTO address (Address1, City, Zip_code, country) VALUES('"
+				+ this->textBox1->Text->ToString() + "','" + this->textBox2->Text->ToString() + "','" + this->textBox3->Text + "','" + this->textBox4->Text->ToString() + "');");
+			this->db_sql->actionRows("INSERT INTO staff (first_name, last_name, hire_date, id_address) VALUES ('" 
+				+ this->first_name->Text->ToString() + "', '" + this->last_name->Text->ToString() + "', '" + this->hire_date->Text->ToString() + "', (SELECT TOP 1 id_address FROM address ORDER BY id_address DESC));");
+			this->db_sql->actionRows("INSERT INTO has_type_address (id_address, id_type) VALUES((SELECT TOP 1 id_address FROM address ORDER BY id_address DESC), 3)");
+			this->dgv_enr->Refresh();
+			this->last_name->Clear();
+			this->first_name->Clear();
+			this->hire_date->Clear();
+			this->textBox1->Clear();
+			this->textBox2->Clear();
+			this->textBox3->Clear();
+			this->textBox4->Clear();
+		}
+		else {
+			MyFormError0107^ error_load = gcnew MyFormError0107();
+			error_load->Show();
+		}
 	}
-private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void MyFormNewStaff_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->dgv_enr->Refresh();
+		this->oDs = this->oSvc->SelectAllTheStaff("staff");
+		this->dgv_enr->DataSource = this->oDs;
+		this->dgv_enr->DataMember = "staff";
+	}
 };
 }

@@ -1,8 +1,9 @@
+  ProjetV1.MyFormError0107.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormCreateCommand.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewArticle.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewClient.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewStaff.resources - Embedded, ContainedInManifestFile, 
-  ProjetV1.MyFormSearch.resources - Embedded, ContainedInManifestFile, 
+  ProjetV1.MyFormClientSearch.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormUpdateClient.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormUpdateStock.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyMainForm.resources - Embedded, ContainedInManifestFile, 
@@ -21,6 +22,9 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class ProjetV1.MyFormError0107: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ProjetV1.MyFormNewStaff: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

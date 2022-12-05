@@ -475,7 +475,7 @@ namespace ProjetV1 {
 	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->dataGridView1->Refresh();
-		this->oDs = this->oSvc->SelectAllTheStaff("_client");
+		this->oDs = this->oSvc->SelectAllTheStaff("staff");
 		this->dataGridView1->DataSource = this->oDs;
 		this->dataGridView1->DataMember = "_client";
 	}

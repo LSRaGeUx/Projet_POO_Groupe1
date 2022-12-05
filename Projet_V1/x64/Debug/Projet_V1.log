@@ -1,5 +1,3 @@
 ﻿  MyMainForm.cpp
-C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\MyMainForm.h(335,3): error C2065: 'MyFormCreateCommand': undeclared identifier
-C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\MyMainForm.h(335,24): error C2065: 'create_command': undeclared identifier
-C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\MyMainForm.h(335,47): error C2061: syntax error: identifier 'MyFormCreateCommand'
-C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\MyMainForm.h(336,3): error C2065: 'create_command': undeclared identifier
+  Connexion_DB.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Projet_V1.vcxproj -> C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.exe

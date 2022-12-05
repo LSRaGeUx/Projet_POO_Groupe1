@@ -1,5 +1,6 @@
 #pragma once
 #include "Raquette.h"
+#include "MyFormError0107.h"
 namespace ProjetV1 {
 
 	using namespace System;
@@ -38,6 +39,8 @@ namespace ProjetV1 {
 	protected:
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
+	private: NS_Comp_Data::CLcad^ db_sql;
+	private: NS_Comp_Data::CLcad^ oCad;
 	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip1;
 	private: System::Windows::Forms::DataGridView^ dgv_enr;
 	private: System::Windows::Forms::Label^ label1;
@@ -45,7 +48,7 @@ namespace ProjetV1 {
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TextBox^ last_name;
 	private: System::Windows::Forms::TextBox^ first_name;
-	private: System::Windows::Forms::TextBox^ hire_date;
+	private: System::Windows::Forms::TextBox^ birthdate;
 	private: System::Windows::Forms::Button^ btn_Create;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
@@ -53,6 +56,8 @@ namespace ProjetV1 {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Label^ label7;
 	private: System::ComponentModel::IContainer^ components;
 
 	private:
@@ -69,6 +74,8 @@ namespace ProjetV1 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			this->db_sql = (gcnew NS_Comp_Data::CLcad());
+			this->oCad = (gcnew NS_Comp_Data::CLcad());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyFormNewClient::typeid));
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->dgv_enr = (gcnew System::Windows::Forms::DataGridView());
@@ -77,7 +84,7 @@ namespace ProjetV1 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->last_name = (gcnew System::Windows::Forms::TextBox());
 			this->first_name = (gcnew System::Windows::Forms::TextBox());
-			this->hire_date = (gcnew System::Windows::Forms::TextBox());
+			this->birthdate = (gcnew System::Windows::Forms::TextBox());
 			this->btn_Create = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -85,6 +92,8 @@ namespace ProjetV1 {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -146,12 +155,12 @@ namespace ProjetV1 {
 			this->first_name->Size = System::Drawing::Size(355, 22);
 			this->first_name->TabIndex = 6;
 			// 
-			// hire_date
+			// birthdate
 			// 
-			this->hire_date->Location = System::Drawing::Point(95, 77);
-			this->hire_date->Name = L"hire_date";
-			this->hire_date->Size = System::Drawing::Size(355, 22);
-			this->hire_date->TabIndex = 7;
+			this->birthdate->Location = System::Drawing::Point(95, 77);
+			this->birthdate->Name = L"birthdate";
+			this->birthdate->Size = System::Drawing::Size(355, 22);
+			this->birthdate->TabIndex = 7;
 			// 
 			// btn_Create
 			// 
@@ -161,7 +170,7 @@ namespace ProjetV1 {
 			this->btn_Create->TabIndex = 8;
 			this->btn_Create->Text = L"Create";
 			this->btn_Create->UseVisualStyleBackColor = true;
-			this->btn_Create->Click += gcnew System::EventHandler(this, &MyFormNewClient::btn_insert_Click);
+			this->btn_Create->Click += gcnew System::EventHandler(this, &MyFormNewClient::btn_create_Click);
 			// 
 			// textBox1
 			// 
@@ -213,11 +222,29 @@ namespace ProjetV1 {
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"ZIP code";
 			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(334, 176);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(116, 22);
+			this->textBox4->TabIndex = 15;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(276, 179);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(52, 16);
+			this->label7->TabIndex = 16;
+			this->label7->Text = L"Country";
+			// 
 			// MyFormNewClient
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(661, 475);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -227,7 +254,7 @@ namespace ProjetV1 {
 			this->Controls->Add(this->btn_Create);
 			this->Controls->Add(this->last_name);
 			this->Controls->Add(this->first_name);
-			this->Controls->Add(this->hire_date);
+			this->Controls->Add(this->birthdate);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label3);
@@ -235,6 +262,7 @@ namespace ProjetV1 {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyFormNewClient";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyFormNewClient::MyFormNewClient_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -243,18 +271,44 @@ namespace ProjetV1 {
 #pragma endregion
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void btn_create_Click(System::Object^ sender, System::EventArgs^ e)
 	{
+		if (!System::String::IsNullOrEmpty(this->last_name->Text) &&
+			!System::String::IsNullOrEmpty(this->first_name->Text) &&
+			!System::String::IsNullOrEmpty(this->birthdate->Text) &&
+			!System::String::IsNullOrEmpty(this->textBox1->Text) &&
+			!System::String::IsNullOrEmpty(this->textBox2->Text) &&
+			!System::String::IsNullOrEmpty(this->textBox3->Text) &&
+			!System::String::IsNullOrEmpty(this->textBox4->Text)) {
+			this->db_sql->actionRows("INSERT INTO address (Address1, City, Zip_code, country) VALUES('"
+				+ this->textBox1->Text->ToString() + "','" + this->textBox2->Text->ToString() + "','" + this->textBox3->Text + "','" + this->textBox4->Text->ToString() + "');");
+			this->db_sql->actionRows("INSERT INTO client (first_name, last_name, birthdate) VALUES ('"
+				+ this->first_name->Text->ToString() + "', '" + this->last_name->Text->ToString() + "', '" + this->birthdate->Text->ToString() +"');");
+			this->db_sql->actionRows("INSERT INTO client_has_address (id_address, id_client) VALUES((SELECT TOP 1 id_address FROM address ORDER BY id_address DESC), 1)");
+			this->db_sql->actionRows("INSERT INTO client_has_address (id_address, id_client) VALUES((SELECT TOP 1 id_address FROM address ORDER BY id_address DESC), 2)");
+			this->dgv_enr->Refresh();
+			this->last_name->Clear();
+			this->first_name->Clear();
+			this->birthdate->Clear();
+			this->textBox1->Clear();
+			this->textBox2->Clear();
+			this->textBox3->Clear();
+			this->textBox4->Clear();
+		}
+		else {
+			MyFormError0107^ error_load = gcnew MyFormError0107();
+			error_load->Show();
+		}
+	}
+	private: System::Void MyFormNewClient_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->dgv_enr->Refresh();
-		this->oDs = this->oSvc->SelectAllTheStaff("_client");
+		this->oDs = this->oCad->getRows("SELECT [first_name], [last_name], [birthdate], [first_command_date] FROM [Projet_V1].[dbo].client", "client");
 		this->dgv_enr->DataSource = this->oDs;
-		this->dgv_enr->DataMember = "_client";
-		//this->oSvc->ajouterUnePersonne(this->last_name->Text, this->first_name->Text);
-		//this->oSvc->ajouterUneAdresse(this->txt_adresse->Text, this->txt_city->Text, this->txt_zip->Text);
+		this->dgv_enr->DataMember = "client";
 	}
 	private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+};
 }

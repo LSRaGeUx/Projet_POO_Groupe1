@@ -4,12 +4,17 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 System::String^ NS_Comp_Mappage::Staff_manager::Select_staff(void)
 {
-	return "SELECT [Id_client], [first_name], [last_name], [birthdate] FROM [Projet_V1].[dbo].[client]";
+	return "SELECT [id_staff], [first_name], [last_name], [hire_date] FROM [Projet_V1].[dbo].[staff]";
 }
 System::String^ NS_Comp_Mappage::Staff_manager::Insert_staff(void)
 {
-	return "INSERT INTO staff (firts_name, lasy_name, hire_date) VALUES ('" + this->first_name + "', '" + this->last_name +"', '" + this->hire_date + "');";
+	return "INSERT INTO staff (first_name, last_name, hire_date, id_address) VALUES ('" + this->first_name + "', '" + this->last_name +"', '" + this->hire_date + ", 100)'); ";
 }
+System::String^ NS_Comp_Mappage::Staff_manager::Insert_has_staff_address(void)
+{
+	return "INSERT INTO has_staff_address(id_address, id_type) VALUES(MAX([address].id_address), 3)";
+}
+
 System::String^ NS_Comp_Mappage::Staff_manager::Delete_staff(void)
 {
 	return "";
@@ -39,11 +44,11 @@ System::String^ NS_Comp_Mappage::Staff_manager::getHireDate(void) { return this-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 System::String^ NS_Comp_Mappage::Address_manager::Select_adresse(void)
 {
-	return "SELECT [Id_address], [address1], [city], [Zip_code], [country] FROM [XXXXXXXXXX].[dbo].[_Address]";
+	return "SELECT [Id_address], [address1], [city], [Zip_code], [country] FROM [Test_Projet].[dbo].[address]";
 }
 System::String^ NS_Comp_Mappage::Address_manager::Insert_adresse(void)
 {
-	return "INSERT INTO _Address (Address1, City, Zip_code, country) VALUES('" + this->adresse + "','" + this->city + "','" + this->zip + "','" + this->country + "');";
+	return "INSERT INTO address (Address1, City, Zip_code, country) VALUES('" + this->adresse + "','" + this->city + "','" + this->zip + "','" + this->country + "');";
 }
 System::String^ NS_Comp_Mappage::Address_manager::Delete_address(void)
 {
@@ -79,7 +84,7 @@ System::String^ NS_Comp_Mappage::Address_manager::getCountry(void) { return this
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 System::String^ NS_Comp_Mappage::Client_manager::Select_client(void)
 {
-	return "SELECT [Id_client], [first_name], [last_name], [birthdate], [first_order_date] FROM [XXXXXXXXXX].[dbo].[_Client]";
+	return "SELECT [Id_client], [first_name], [last_name], [birthdate], [first_order_date] FROM [Test_Projet].[dbo].[_Client]";
 }
 System::String^ NS_Comp_Mappage::Client_manager::Insert_client(void)
 {
@@ -235,9 +240,9 @@ System::String^ NS_Comp_Mappage::Stock_manager::getQuantitySold(void) { return t
 NS_Comp_Svc::CLservices::CLservices(void)
 {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
+	this->oMappClient = gcnew NS_Comp_Mappage::Client_manager();
 	this->oMappStaff = gcnew NS_Comp_Mappage::Staff_manager();
 	this->oMappAddress = gcnew NS_Comp_Mappage::Address_manager();
-	//this->oMappNature = gcnew NS_Comp_Mappage::Nature_manager();
 }
 //---------------------------------------------------------------------------------------------------------------------------
 
@@ -248,6 +253,14 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::SelectAllTheStaff(System::String
 	sql = this->oMappStaff->Select_staff();
 	return this->oCad->getRows(sql, dataTableName);
 }
+
+System::Data::DataSet^ NS_Comp_Svc::CLservices::SelectAllTheClient(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappClient->Select_client();
+	return this->oCad->getRows(sql, dataTableName);
+}
 void NS_Comp_Svc::CLservices::AddStaffMember(System::String^ last_name, System::String^ first_name, System::String^ hire_date)
 {
 	System::String^ sql;
@@ -256,7 +269,7 @@ void NS_Comp_Svc::CLservices::AddStaffMember(System::String^ last_name, System::
 	this->oMappStaff->setFirstName(first_name);
 	this->oMappStaff->setHireDate(hire_date);
 	sql = this->oMappStaff->Insert_staff();
-
+	//sql += this->oMappStaff->Insert_has_staff_address();
 	this->oCad->actionRows(sql);
 
 }
@@ -270,13 +283,14 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::SelectAllTheAddress(System::Stri
 	return this->oCad->getRows(sql, dataTableName);
 }
 
-void NS_Comp_Svc::CLservices::AddAddress(System::String^ address, System::String^ city, System::String^ zip)
+void NS_Comp_Svc::CLservices::AddAddress(System::String^ address, System::String^ city, System::String^ zip, System::String^ country)
 {
 	System::String^ sql;
 
 	this->oMappAddress->setAdresse(address);
 	this->oMappAddress->setCity(city);
 	this->oMappAddress->setZip(zip);
+	this->oMappAddress->setCountry(country);
 	sql = this->oMappAddress->Insert_adresse();
 
 	this->oCad->actionRows(sql);

@@ -11,10 +11,11 @@ C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Pr
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.vcxproj.GenerateResource.cache
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\Projet_V1.exe
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormNewStaff.resources
-C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormSearch.resources
-C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormSearch.en-GB.resources
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormNewArticle.resources
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormNewClient.resources
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormUpdateClient.resources
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormUpdateStock.resources
 C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormCreateCommand.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormError0107.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormClientSearch.resources
+C:\Users\Yan\OneDrive\Documents\GitHub\Projet_POO_Groupe1\Projet_V1\x64\Debug\ProjetV1.MyFormClientSearch.en-GB.resources
