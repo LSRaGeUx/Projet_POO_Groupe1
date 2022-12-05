@@ -36,6 +36,9 @@ namespace ProjetV1 {
 		}
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
+	private: System::Data::DataSet^ oDs1;
+	private: NS_Comp_Data::CLcad^ oCad;
+	private: NS_Comp_Data::CLcad^ db_sql;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
@@ -68,8 +71,11 @@ namespace ProjetV1 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyFormNewArticle::typeid));
-			this->oSvc = (gcnew NS_Comp_Svc::CLservices());
 			this->oDs = (gcnew System::Data::DataSet());
+			this->oSvc = (gcnew NS_Comp_Svc::CLservices());
+			this->oDs1 = (gcnew System::Data::DataSet());
+			this->oCad = (gcnew NS_Comp_Data::CLcad());
+			this->db_sql = (gcnew NS_Comp_Data::CLcad());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -190,6 +196,8 @@ namespace ProjetV1 {
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(619, 165);
 			this->dataGridView1->TabIndex = 13;
+			this->dataGridView1->Visible = true;
+
 			// 
 			// button1
 			// 
@@ -199,6 +207,8 @@ namespace ProjetV1 {
 			this->button1->TabIndex = 14;
 			this->button1->Text = L"Create";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyFormNewArticle::button_create_Click);
+
 			// 
 			// label7
 			// 
@@ -216,17 +226,18 @@ namespace ProjetV1 {
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(243, 24);
 			this->comboBox1->TabIndex = 17;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyFormNewArticle::comboBox1_SelectedIndexChanged);
+			this->comboBox1->Click += gcnew System::EventHandler(this, &MyFormNewArticle::AddCbx);
 			// 
 			// dataGridViewNature
 			// 
 			this->dataGridViewNature->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridViewNature->Location = System::Drawing::Point(12, 266);
-			this->dataGridViewNature->Name = L"dataGridView2";
+			this->dataGridViewNature->Name = L"dataGridViewNature";
 			this->dataGridViewNature->RowHeadersWidth = 51;
 			this->dataGridViewNature->RowTemplate->Height = 24;
 			this->dataGridViewNature->Size = System::Drawing::Size(240, 150);
 			this->dataGridViewNature->TabIndex = 18;
+			this->dataGridViewNature->Visible = false;
 			// 
 			// MyFormNewArticle
 			// 
@@ -252,6 +263,7 @@ namespace ProjetV1 {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyFormNewArticle";
 			this->Text = L"MyFormNewArticle";
+			this->Load += gcnew System::EventHandler(this, &MyFormNewArticle::MyFormCreateArticle_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewNature))->EndInit();
 			this->ResumeLayout(false);
@@ -263,7 +275,32 @@ namespace ProjetV1 {
 	}
 private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button_create_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (!System::String::IsNullOrEmpty(this->textBox1->Text) &&
+		!System::String::IsNullOrEmpty(this->textBox2->Text) &&
+		!System::String::IsNullOrEmpty(this->textBox3->Text) &&
+		!System::String::IsNullOrEmpty(this->textBox4->Text) &&
+		!System::String::IsNullOrEmpty(this->comboBox1->Text) &&
+		!System::String::IsNullOrEmpty(this->textBox5->Text)) {
+		this->db_sql->actionRows("INSERT INTO stock (id_stock, article_name, unit_price_ET, quantity_in_stock, reorder_point, vat, quantity_sold) VALUES("
+			+ this->textBox1->Text + ",'" + this->textBox2->Text->ToString() + "'," +Convert::ToInt64(this->textBox3->Text->ToString()) + "," + this->textBox4->Text + "," + this->textBox5->Text + ", 20.6, 0);");
+		if (comboBox1->Text == "Resistor") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 1 WHERE id_stock = " + this->textBox1->Text->ToString() + ");");
+		}else if (comboBox1->Text == "Capacitor") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 2 WHERE id_stock = " + this->textBox1->Text->ToString() + ");");
+		}
+		this->dataGridView1->Refresh();
+		this->textBox1->Clear();
+		this->textBox2->Clear();
+		this->textBox3->Clear();
+		this->textBox4->Clear();
+		this->textBox5->Clear();
+		this->comboBox1->SelectedIndex = 0;
+	}
+	else {
+		MyFormError0107^ error_load = gcnew MyFormError0107();
+		error_load->Show();
+	}
 }
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -271,17 +308,23 @@ private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, Syst
 }
 private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-	private: System::Void AddCbx(System::Object^ sender, System::EventArgs^ e) {
-		this->comboBox1->Items->Clear();
-		for (int i = 0; i < (this->dataGridView1->RowCount) - 1; i++) {
-			this->comboBox1->Items->Add(this->dataGridView1->Rows[i]->Cells[1]->Value);
-		}
-	}
-	/*private: System::Void MyFormCreate_Load_Nature(System::Object^ sender, System::EventArgs^ e) {
-		this->dataGridView1->Refresh();
-		this->oDs = this->oSvc->SelectAllTheStaff("_client");
-		this->dataGridView1->DataSource = this->oDs;
-		this->dataGridView1->DataMember = "_client";
-	}*/
+private: System::Void AddCbx(System::Object^ sender, System::EventArgs^ e) {
+	//this->Load += gcnew System::EventHandler(this, &MyFormNewArticle::MyFormCreateNature_Load);
+	this->comboBox1->Items->Clear();
+	this->comboBox1->Items->Add("Resistor");
+	this->comboBox1->Items->Add("Capacitor");
+	this->comboBox1->Items->Add("LED");
+	this->comboBox1->Items->Add("Microprocessor");
+	this->comboBox1->Items->Add("Display");
+	this->comboBox1->Items->Add("Sensor");
+}
+private: System::Void MyFormCreateArticle_Load(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oDs = this->oCad->getRows("SELECT * FROM [Projet_V1].[dbo].stock", "stock");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "stock";
+}
+
+
 };
 }
