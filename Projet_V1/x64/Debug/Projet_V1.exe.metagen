@@ -1,12 +1,16 @@
+  ProjetV1.MyForm2.resources - Embedded, ContainedInManifestFile, 
+  ProjetV1.MyFormClientSearch.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormError0107.resources - Embedded, ContainedInManifestFile, 
-  ProjetV1.MyFormCreateCommand.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewArticle.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewClient.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormNewStaff.resources - Embedded, ContainedInManifestFile, 
-  ProjetV1.MyFormClientSearch.resources - Embedded, ContainedInManifestFile, 
+  ProjetV1.MyFormSearchStaff.resources - Embedded, ContainedInManifestFile, 
+  ProjetV1.MyFormStockSearch.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormUpdateClient.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyFormUpdateStock.resources - Embedded, ContainedInManifestFile, 
   ProjetV1.MyMainForm.resources - Embedded, ContainedInManifestFile, 
+  ProjetV1.MyFormCreateCommand.resources - Embedded, ContainedInManifestFile, 
+  ProjetV1.MyFormSearch.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Projet_V1, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -22,6 +26,9 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class ProjetV1.MyFormCreateCommand: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ProjetV1.MyFormError0107: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -40,7 +47,13 @@ Class ProjetV1.MyFormSearch: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
 Class ProjetV1.MyFormNewArticle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class PROJETPOO.MyFormCreateCommand: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class ProjetV1.MyFormUpdateStaff: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ProjetV1.MyFormSearchStaff: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ProjetV1.MyFormStockSearch: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class ProjetV1.MyMainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

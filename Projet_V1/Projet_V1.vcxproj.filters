@@ -53,13 +53,22 @@
     <ClInclude Include="MyFormUpdateStock.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="MyFormCreateCommand.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MyFormError0107.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm2.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormUpdateStaff.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormSearchStaff.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormStockSearch.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -73,7 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyFormCreateCommand.resx">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormSearch.resx">
+      <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

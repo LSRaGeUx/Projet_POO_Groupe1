@@ -125,7 +125,7 @@ namespace ProjetV1 {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(72, 16);
 			this->label1->TabIndex = 3;
-			this->label1->Text = L"First Name";
+			this->label1->Text = L"Last Name";
 			// label2
 			// 
 			this->label2->AutoSize = true;
@@ -133,7 +133,7 @@ namespace ProjetV1 {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(72, 16);
 			this->label2->TabIndex = 4;
-			this->label2->Text = L"Last Name";
+			this->label2->Text = L"First Name";
 			// 
 			// label3
 			// 
@@ -298,6 +298,11 @@ namespace ProjetV1 {
 			this->textBox2->Clear();
 			this->textBox3->Clear();
 			this->textBox4->Clear();
+
+			this->dgv_enr->Refresh();
+			this->oDs = this->oSvc->SelectAllTheStaff("staff");
+			this->dgv_enr->DataSource = this->oDs;
+			this->dgv_enr->DataMember = "staff";
 		}
 		else {
 			MyFormError0107^ error_load = gcnew MyFormError0107();

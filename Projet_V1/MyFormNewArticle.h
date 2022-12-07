@@ -54,7 +54,6 @@ namespace ProjetV1 {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::DataGridView^ dataGridViewNature;
 	protected:
 
 	private:
@@ -91,9 +90,7 @@ namespace ProjetV1 {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->dataGridViewNature = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewNature))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBox1
@@ -228,17 +225,6 @@ namespace ProjetV1 {
 			this->comboBox1->TabIndex = 17;
 			this->comboBox1->Click += gcnew System::EventHandler(this, &MyFormNewArticle::AddCbx);
 			// 
-			// dataGridViewNature
-			// 
-			this->dataGridViewNature->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridViewNature->Location = System::Drawing::Point(12, 266);
-			this->dataGridViewNature->Name = L"dataGridViewNature";
-			this->dataGridViewNature->RowHeadersWidth = 51;
-			this->dataGridViewNature->RowTemplate->Height = 24;
-			this->dataGridViewNature->Size = System::Drawing::Size(240, 150);
-			this->dataGridViewNature->TabIndex = 18;
-			this->dataGridViewNature->Visible = false;
-			// 
 			// MyFormNewArticle
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -259,13 +245,11 @@ namespace ProjetV1 {
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->dataGridViewNature);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyFormNewArticle";
 			this->Text = L"MyFormNewArticle";
 			this->Load += gcnew System::EventHandler(this, &MyFormNewArticle::MyFormCreateArticle_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewNature))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -284,23 +268,40 @@ private: System::Void button_create_Click(System::Object^ sender, System::EventA
 		!System::String::IsNullOrEmpty(this->textBox5->Text)) {
 		this->db_sql->actionRows("INSERT INTO stock (id_stock, article_name, unit_price_ET, quantity_in_stock, reorder_point, vat, quantity_sold) VALUES("
 			+ this->textBox1->Text + ",'" + this->textBox2->Text->ToString() + "'," +Convert::ToInt64(this->textBox3->Text->ToString()) + "," + this->textBox4->Text + "," + this->textBox5->Text + ", 20.6, 0);");
-		if (comboBox1->Text == "Resistor") {
-			this->db_sql->actionRows("UPDATE stock SET id_nature = 1 WHERE id_stock = " + this->textBox1->Text->ToString() + ");");
-		}else if (comboBox1->Text == "Capacitor") {
-			this->db_sql->actionRows("UPDATE stock SET id_nature = 2 WHERE id_stock = " + this->textBox1->Text->ToString() + ");");
+		if (comboBox1->SelectedItem->ToString() == "Resistor") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 1 WHERE id_stock = " + this->textBox1->Text + ";");
 		}
-		this->dataGridView1->Refresh();
-		this->textBox1->Clear();
+		else if (comboBox1->SelectedItem->ToString() == "Capacitor") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 2 WHERE id_stock = " + this->textBox1->Text + ";");
+		}
+		else if (comboBox1->SelectedItem->ToString() == "LED") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 3 WHERE id_stock = " + this->textBox1->Text + ";");
+		}
+		else if (comboBox1->SelectedItem->ToString() == "Microprocessor") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 4 WHERE id_stock = " + this->textBox1->Text + ";");
+		}
+		else if (comboBox1->SelectedItem->ToString() == "Display") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 5 WHERE id_stock = " + this->textBox1->Text + ";");
+		}
+		else if (comboBox1->SelectedItem->ToString() == "Sensor") {
+			this->db_sql->actionRows("UPDATE stock SET id_nature = 6 WHERE id_stock = " + this->textBox1->Text + ";");
+		}
+		this->textBox1->Clear(); 
 		this->textBox2->Clear();
 		this->textBox3->Clear();
 		this->textBox4->Clear();
 		this->textBox5->Clear();
-		this->comboBox1->SelectedIndex = 0;
+		this->comboBox1->ResetText();
+		this->dataGridView1->Refresh();
 	}
 	else {
 		MyFormError0107^ error_load = gcnew MyFormError0107();
 		error_load->Show();
 	}
+	this->dataGridView1->Refresh();
+	this->oDs = this->oCad->getRows("SELECT * FROM [Projet_V1].[dbo].stock", "stock");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "stock";
 }
 private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }

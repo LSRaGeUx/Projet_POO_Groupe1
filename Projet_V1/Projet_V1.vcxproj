@@ -127,10 +127,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Connexion_DB.h" />
-    <ClInclude Include="MyFormError0107.h">
+    <ClInclude Include="MyForm2.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyFormCreateCommand.h">
+    <ClInclude Include="MyFormStockSearch.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormSearchStaff.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormError0107.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormNewArticle.h">
@@ -143,6 +149,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormUpdateClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormUpdateStaff.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormUpdateStock.h">
@@ -158,10 +167,15 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MyForm2.resx">
+      <DependentUpon>MyForm2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormClientSearch.resx">
+      <DependentUpon>MyFormClientSearch.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormError0107.resx">
       <DependentUpon>MyFormError0107.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFormCreateCommand.resx" />
     <EmbeddedResource Include="MyFormNewArticle.resx">
       <DependentUpon>MyFormNewArticle.h</DependentUpon>
     </EmbeddedResource>
@@ -171,11 +185,11 @@
     <EmbeddedResource Include="MyFormNewStaff.resx">
       <DependentUpon>MyFormNewStaff.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFormClientSearch.en-GB.resx">
-      <DependentUpon>MyFormClientSearch.h</DependentUpon>
+    <EmbeddedResource Include="MyFormSearchStaff.resx">
+      <DependentUpon>MyFormSearchStaff.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyFormClientSearch.resx">
-      <DependentUpon>MyFormClientSearch.h</DependentUpon>
+    <EmbeddedResource Include="MyFormStockSearch.resx">
+      <DependentUpon>MyFormStockSearch.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormUpdateClient.resx">
       <DependentUpon>MyFormUpdateClient.h</DependentUpon>
@@ -186,6 +200,8 @@
     <EmbeddedResource Include="MyMainForm.resx">
       <DependentUpon>MyMainForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyFormCreateCommand.resx" />
+    <EmbeddedResource Include="MyFormSearch.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

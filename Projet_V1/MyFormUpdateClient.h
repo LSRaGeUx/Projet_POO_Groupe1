@@ -37,6 +37,8 @@ namespace ProjetV1 {
 		}
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
+	private: NS_Comp_Data::CLcad^ db_sql;
+	private: NS_Comp_Data::CLcad^ oCad;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::ComboBox^ cbx_select_client;
 	private: System::Windows::Forms::RadioButton^ radioButtonModify;
@@ -83,6 +85,8 @@ namespace ProjetV1 {
 		{
 			this->oSvc = (gcnew NS_Comp_Svc::CLservices());
 			this->oDs = (gcnew System::Data::DataSet());
+			this->db_sql = (gcnew NS_Comp_Data::CLcad());
+			this->oCad = (gcnew NS_Comp_Data::CLcad());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->cbx_select_client = (gcnew System::Windows::Forms::ComboBox());
 			this->radioButtonModify = (gcnew System::Windows::Forms::RadioButton());
@@ -166,7 +170,6 @@ namespace ProjetV1 {
 			this->Modify->Size = System::Drawing::Size(47, 16);
 			this->Modify->TabIndex = 4;
 			this->Modify->Text = L"Modify";
-			this->Modify->Click += gcnew System::EventHandler(this, &MyFormUpdate::label1_Click);
 			// 
 			// Delete
 			// 
@@ -268,7 +271,6 @@ namespace ProjetV1 {
 			this->lbl_address->Size = System::Drawing::Size(58, 16);
 			this->lbl_address->TabIndex = 16;
 			this->lbl_address->Text = L"Address";
-			this->lbl_address->Click += gcnew System::EventHandler(this, &MyFormUpdate::label6_Click);
 			// 
 			// lbl_city
 			// 
@@ -287,7 +289,6 @@ namespace ProjetV1 {
 			this->lbl_zip_code->Size = System::Drawing::Size(60, 16);
 			this->lbl_zip_code->TabIndex = 18;
 			this->lbl_zip_code->Text = L"Zip code";
-			this->lbl_zip_code->Click += gcnew System::EventHandler(this, &MyFormUpdate::label8_Click);
 			// 
 			// lbl_country
 			// 
@@ -315,7 +316,7 @@ namespace ProjetV1 {
 			this->btn_modify->TabIndex = 25;
 			this->btn_modify->Text = L"Modify";
 			this->btn_modify->UseVisualStyleBackColor = true;
-			this->btn_modify->Click += gcnew System::EventHandler(this, &MyFormUpdate::button1_Click);
+			this->btn_modify->Click += gcnew System::EventHandler(this, &MyFormUpdate::button_modify_Click);
 			// 
 			// btn_delete
 			// 
@@ -325,6 +326,9 @@ namespace ProjetV1 {
 			this->btn_delete->TabIndex = 26;
 			this->btn_delete->Text = L"Delete";
 			this->btn_delete->UseVisualStyleBackColor = true;
+			this->btn_delete->Enabled = false;
+			this->btn_delete->Click += gcnew System::EventHandler(this, &MyFormUpdate::button_delete_Click);
+
 			// 
 			// lbl_select_client
 			// 
@@ -336,7 +340,6 @@ namespace ProjetV1 {
 			this->lbl_select_client->Size = System::Drawing::Size(101, 20);
 			this->lbl_select_client->TabIndex = 27;
 			this->lbl_select_client->Text = L"Select client";
-			this->lbl_select_client->Click += gcnew System::EventHandler(this, &MyFormUpdate::label11_Click);
 			// 
 			// groupBox1
 			// 
@@ -430,7 +433,6 @@ namespace ProjetV1 {
 			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
 		}
 #pragma endregion
 	private: System::Void radioButtonModify_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -438,8 +440,11 @@ namespace ProjetV1 {
 		this->groupBox1->Visible = true;
 	}
 	private: System::Void radioButtonDelete_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-		this->btn_delete->BringToFront();
-		this->groupBox1->Visible = false;
+		if (this->radioButtonDelete->Checked == true) {
+			this->btn_delete->BringToFront();
+			this->groupBox1->Visible = false;
+			this->btn_delete->Enabled = true;
+		}
 	}
 	private: System::Void radioButtonLastName_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 		if (this->txt_box_last_name->Enabled == false) {
@@ -472,37 +477,102 @@ namespace ProjetV1 {
 				this->txt_box_country->Enabled = false;
 		}
 	}
-	private: System::Void btn_insert_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void button_modify_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		this->dataGridView1->Refresh();
-		this->oDs = this->oSvc->SelectAllTheStaff("staff");
-		this->dataGridView1->DataSource = this->oDs;
-		this->dataGridView1->DataMember = "_client";
+		if (this->radioButtonModify->Checked == true) {
+			if (this->checkBox1->Checked == true) {
+				this->db_sql->actionRows("UPDATE [Projet_V1].[dbo].[client] SET last_name = '" + this->txt_box_last_name->Text->ToString() + "' WHERE id_client = (SELECT id_client FROM client WHERE first_name = '"
+					+ this->cbx_select_client->Text->ToString()->Substring(0, this->cbx_select_client->Text->ToString()->IndexOf(" "))
+					//+ "' AND last_name =  '"
+					//+ this->cbx_select_staff->Text->ToString()->Substring(this->cbx_select_staff->Text->ToString()->IndexOf(" "))
+					+ "');");
+				this->txt_box_last_name->Clear();
+				this->checkBox1->Checked = false;
+				this->txt_box_last_name->Enabled = false;
+			}
+			if (this->checkBox2->Checked == true) {
+				this->db_sql->actionRows("UPDATE [Projet_V1].[dbo].[client] SET first_name = '" + this->txt_box_first_name->Text->ToString() + "' WHERE id_client = (SELECT id_client FROM client WHERE first_name = '"
+					+ this->cbx_select_client->Text->ToString()->Substring(0, this->cbx_select_client->Text->ToString()->IndexOf(" "))
+					//+ "' AND last_name =  '"
+					//+ this->cbx_select_staff->Text->ToString()->Substring(this->cbx_select_staff->Text->ToString()->IndexOf(" "))
+					+ "');");
+				this->txt_box_first_name->Clear();
+				this->checkBox2->Checked = false;
+				this->txt_box_first_name->Enabled = false;
+
+			}
+			if (this->checkBox3->Checked == true) {
+				this->db_sql->actionRows("UPDATE [Projet_V1].[dbo].[client] SET birthdate = CONVERT(date, '" + this->txt_box_birthdate->Text + "') WHERE id_client = (SELECT id_client FROM client WHERE first_name = '"
+					+ this->cbx_select_client->Text->ToString()->Substring(0, this->cbx_select_client->Text->ToString()->IndexOf(" "))
+					//+ "' AND last_name =  '"
+					//+ this->cbx_select_staff->Text->ToString()->Substring(this->cbx_select_staff->Text->ToString()->IndexOf(" "))
+					+ "');");
+				this->txt_box_birthdate->Clear();
+				this->checkBox3->Checked = false;
+				this->txt_box_birthdate->Enabled = false;
+
+			}
+			if (this->checkBox4->Checked == true) {
+				this->db_sql->actionRows("UPDATE [Projet_V1].[dbo].[address] SET address1 = '" + this->txt_box_address->Text->ToString() + "', city = '"
+					+ this->txt_box_city->Text->ToString() + "', zip_code = " + this->txt_box_zip_code->Text + ", country = '"
+					+ this->txt_box_country->Text->ToString() + "' WHERE id_address = (SELECT id_address FROM client_has_address WHERE id_client = (SELECT id_client FROM client WHERE first_name = '"
+					+ this->cbx_select_client->Text->ToString()->Substring(0, this->cbx_select_client->Text->ToString()->IndexOf(" "))
+					//+ "' AND last_name =  '"
+					//+ this->cbx_select_staff->Text->ToString()->Substring(this->cbx_select_staff->Text->ToString()->IndexOf(" "))
+					+ "'));");
+				this->txt_box_address->Clear();
+				this->txt_box_city->Clear();
+				this->txt_box_zip_code->Clear();
+				this->txt_box_country->Clear();
+				this->checkBox4->Checked = false;
+				this->txt_box_address->Enabled = false;
+				this->txt_box_city->Enabled = false;
+				this->txt_box_zip_code->Enabled = false;
+				this->txt_box_country->Enabled = false;
+
+			}
+
+			this->dataGridView1->Refresh();
+			this->oDs = this->oCad->getRows("SELECT[first_name], [last_name], [birthdate], [first_command_date] FROM[Projet_V1].[dbo].client", "client");
+			this->dataGridView1->DataSource = this->oDs;
+			this->dataGridView1->DataMember = "client";
+
+			this->cbx_select_client->ResetText();
+
+		}
 	}
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	
 	private: System::Void MyFormUpdate_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->dataGridView1->Refresh();
-		this->oDs = this->oSvc->SelectAllTheStaff("_client");
+		this->oDs = this->oCad->getRows("SELECT [first_name], [last_name], [birthdate], [first_command_date] FROM [Projet_V1].[dbo].client", "client");
 		this->dataGridView1->DataSource = this->oDs;
-		this->dataGridView1->DataMember = "_client";
+		this->dataGridView1->DataMember = "client";
 	}
 	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void AddCbx(System::Object^ sender, System::EventArgs^ e) {
 		this->cbx_select_client->Items->Clear();
 		for (int i = 0; i < (this->dataGridView1->RowCount)-1; i++) {
-			this->cbx_select_client->Items->Add(this->dataGridView1->Rows[i]->Cells[1]->Value + "" +
-			this->dataGridView1->Rows[i]->Cells[2]->Value);
+			this->cbx_select_client->Items->Add(this->dataGridView1->Rows[i]->Cells[0]->Value + " " +
+			this->dataGridView1->Rows[i]->Cells[1]->Value);
 		}
 	}
-	private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	private: System::Void button_delete_Click(System::Object^ sender, System::EventArgs^ e) {
+			
+		this->db_sql->actionRows("UPDATE command SET id_client = '' WHERE id_client = (SELECT id_client FROM client WHERE first_name ='" + this->cbx_select_client->Text->ToString()->Substring(0, this->cbx_select_client->Text->IndexOf(" ")) + "');");
+		this->db_sql->actionRows("UPDATE client_has_address SET id_client = '' WHERE id_client = (SELECT Id_client FROM client WHERE first_name ='" + this->cbx_select_client->Text->ToString()->Substring(0, this->cbx_select_client->Text->IndexOf(" "))+"');");
+		this->db_sql->actionRows("DELETE FROM client WHERE first_name = '" + this->cbx_select_client->Text->ToString()->Substring(0, this->cbx_select_client->Text->IndexOf(" ")) 
+		+ "' AND last_name = '" 
+		+ (this->cbx_select_client->Text->ToString())->Substring(this->cbx_select_client->Text->IndexOf(" ")) 
+		+"';");
+		this->dataGridView1->Refresh();
+		this->oDs = this->oCad->getRows("SELECT [first_name], [last_name], [birthdate], [first_command_date] FROM [Projet_V1].[dbo].client", "client");
+		this->dataGridView1->DataSource = this->oDs;
+		this->dataGridView1->DataMember = "client";
+
+		this->cbx_select_client->ResetText();
+		this->radioButtonDelete->Checked = false;
 	}
-private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void label11_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }

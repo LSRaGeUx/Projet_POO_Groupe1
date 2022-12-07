@@ -1,10 +1,13 @@
 #pragma once
+#include "MyForm2.h"
 #include "MyFormNewStaff.h"
 #include "MyFormNewClient.h"
 #include "MyFormUpdateClient.h"
 #include "MyFormClientSearch.h"
 #include "MyFormNewArticle.h"
-#include "MyFormCreateCommand.h"
+#include "MyFormUpdateStaff.h"
+#include "MyFormSearchStaff.h"
+#include "MyFormStockSearch.h"
 #include "Connexion_DB.h"
 #include "Raquette.h"
 
@@ -177,13 +180,16 @@ namespace ProjetV1 {
 			this->alterMemberToolStripMenuItem->Name = L"alterMemberToolStripMenuItem";
 			this->alterMemberToolStripMenuItem->Size = System::Drawing::Size(139, 26);
 			this->alterMemberToolStripMenuItem->Text = L"Modify";
-			this->alterMemberToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::alterMemberToolStripMenuItem_Click);
+			this->alterMemberToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::Update_Staff_Click);
 			// 
 			// searchToolStripMenuItem1
 			// 
 			this->searchToolStripMenuItem1->Name = L"searchToolStripMenuItem1";
 			this->searchToolStripMenuItem1->Size = System::Drawing::Size(139, 26);
 			this->searchToolStripMenuItem1->Text = L"Search";
+			this->searchToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyMainForm::Search_Staff_Click);
+
+
 			// 
 			// clientToolStripMenuItem
 			// 
@@ -233,7 +239,7 @@ namespace ProjetV1 {
 			this->createToolStripMenuItem1->Name = L"createToolStripMenuItem1";
 			this->createToolStripMenuItem1->Size = System::Drawing::Size(139, 26);
 			this->createToolStripMenuItem1->Text = L"Create";
-			//this->createToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyMainForm::Create_Command_Click);
+			this->createToolStripMenuItem1->Click += gcnew System::EventHandler(this, &MyMainForm::Create_Command_Click);
 
 			// 
 			// modifyToolStripMenuItem1
@@ -247,7 +253,6 @@ namespace ProjetV1 {
 			this->searchToolStripMenuItem3->Name = L"searchToolStripMenuItem3";
 			this->searchToolStripMenuItem3->Size = System::Drawing::Size(139, 26);
 			this->searchToolStripMenuItem3->Text = L"Search";
-			this->searchToolStripMenuItem3->Click += gcnew System::EventHandler(this, &MyMainForm::Search_Client_Click);
 
 			// 
 			// stockToolStripMenuItem
@@ -273,12 +278,14 @@ namespace ProjetV1 {
 			this->modifyToolStripMenuItem2->Name = L"modifyToolStripMenuItem2";
 			this->modifyToolStripMenuItem2->Size = System::Drawing::Size(139, 26);
 			this->modifyToolStripMenuItem2->Text = L"Modify";
+
 			// 
 			// searchToolStripMenuItem
 			// 
 			this->searchToolStripMenuItem->Name = L"searchToolStripMenuItem";
 			this->searchToolStripMenuItem->Size = System::Drawing::Size(139, 26);
 			this->searchToolStripMenuItem->Text = L"Search";
+			this->searchToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyMainForm::Search_Stock_Click);
 			// 
 			// quitAltF4ToolStripMenuItem
 			// 
@@ -331,12 +338,22 @@ namespace ProjetV1 {
 		MyFormNewArticle^ create_stock = gcnew MyFormNewArticle();
 		create_stock->Show();
 	}
-	//private: System::Void Create_Command_Click(System::Object^ sender, System::EventArgs^ e) {
-	//	MyFormCreateCommand^ create_command = gcnew MyFormCreateCommand();
-	//	create_command->Show();
-	//}
-
-
+	private: System::Void Create_Command_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormCreateCommand^ create_command = gcnew MyFormCreateCommand();
+		create_command->Show();
+	}
+	private: System::Void Update_Staff_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormUpdateStaff^ update_staff = gcnew MyFormUpdateStaff();
+		update_staff->Show();
+	}
+	private: System::Void Search_Staff_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormSearchStaff^ search_staff = gcnew MyFormSearchStaff();
+		search_staff->Show();
+	}
+	private: System::Void Search_Stock_Click(System::Object^ sender, System::EventArgs^ e) {
+		MyFormStockSearch^ search_stock = gcnew MyFormStockSearch();
+		search_stock->Show();
+	}
 	private: System::Void menuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void createNewMemberToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {

@@ -283,7 +283,7 @@ namespace ProjetV1 {
 			this->db_sql->actionRows("INSERT INTO address (Address1, City, Zip_code, country) VALUES('"
 				+ this->textBox1->Text->ToString() + "','" + this->textBox2->Text->ToString() + "','" + this->textBox3->Text + "','" + this->textBox4->Text->ToString() + "');");
 			this->db_sql->actionRows("INSERT INTO client (first_name, last_name, birthdate) VALUES ('"
-				+ this->first_name->Text->ToString() + "', '" + this->last_name->Text->ToString() + "', '" + this->birthdate->Text->ToString() +"');");
+				+ this->last_name->Text->ToString() + "', '" + this->first_name->Text->ToString() + "', '" + this->birthdate->Text->ToString() +"');");
 			this->db_sql->actionRows("INSERT INTO client_has_address (id_address, id_client) VALUES((SELECT TOP 1 id_address FROM address ORDER BY id_address DESC), 1)");
 			this->db_sql->actionRows("INSERT INTO client_has_address (id_address, id_client) VALUES((SELECT TOP 1 id_address FROM address ORDER BY id_address DESC), 2)");
 			this->dgv_enr->Refresh();
@@ -299,6 +299,10 @@ namespace ProjetV1 {
 			MyFormError0107^ error_load = gcnew MyFormError0107();
 			error_load->Show();
 		}
+		this->dgv_enr->Refresh();
+		this->oDs = this->oCad->getRows("SELECT [first_name], [last_name], [birthdate], [first_command_date] FROM [Projet_V1].[dbo].client", "client");
+		this->dgv_enr->DataSource = this->oDs;
+		this->dgv_enr->DataMember = "client";
 	}
 	private: System::Void MyFormNewClient_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->dgv_enr->Refresh();
